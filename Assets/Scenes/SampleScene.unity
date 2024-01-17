@@ -459,10 +459,9 @@ GameObject:
   m_Component:
   - component: {fileID: 802772932}
   - component: {fileID: 802772931}
+  - component: {fileID: 802772930}
   - component: {fileID: 802772933}
   - component: {fileID: 802772934}
-  - component: {fileID: 802772930}
-  - component: {fileID: 802772935}
   m_Layer: 0
   m_Name: Rocket_0
   m_TagString: Untagged
@@ -694,20 +693,6 @@ PolygonCollider2D:
       - {x: 6.002053, y: -15.653763}
       - {x: 5.7937503, y: -12.684998}
   m_UseDelaunayMesh: 0
---- !u!114 &802772935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802772929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e6ffe3c6493774aa0c74b59673d5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireParticlesEffect: {fileID: 2472416973714407208, guid: 0853256a67c641541b84513164e55796, type: 3}
-  finishPlayEffect: 0
 --- !u!1 &1464218990
 GameObject:
   m_ObjectHideFlags: 3
