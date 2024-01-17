@@ -9,6 +9,7 @@ public class RocketLand : MonoBehaviour
 
     private void Awake()
     {
+        //获取组件
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
     }
