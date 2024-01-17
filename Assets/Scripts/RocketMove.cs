@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class RocketMove : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Rigidbody2D rb;
+    //获取特效代码
+    private RocketFireParticles rocketFireParticles;
+
     [Header("基本参数")]
     public float pushForce;
 
     void Start()
     {
-
+        //获取特效代码
+        rocketFireParticles = GetComponent<RocketFireParticles>();
     }
 
     // Update is called once per frame
@@ -46,10 +48,19 @@ public class RocketMove : MonoBehaviour
 
         if (Input.GetMouseButton(0))//当鼠标左键按下时
         {
+            //重置粒子特效播放
+            rocketFireParticles.finishPlayEffect = false;
+
             //给予Rocket一个向着鼠标方向的力
             rb.AddForce(transform.up * pushForce, ForceMode2D.Force);
         }
-
+        else
+        {
+            if (!rocketFireParticles.finishPlayEffect)
+            {
+                rocketFireParticles.PlayEffect();
+            }
+        }
 
     }
 }
