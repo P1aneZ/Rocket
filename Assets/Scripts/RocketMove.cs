@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,15 @@ using UnityEngine;
 public class RocketMove : MonoBehaviour
 {
     // Start is called before the first frame update
+    private PhysicsCheck physicsCheck;
+
     public Rigidbody2D rb;
+    
     [Header("基本参数")]
-    public float pushForce;
-
-    void Start()
+    public float pushForce;//推进的力
+    private void Awake()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,7 @@ public class RocketMove : MonoBehaviour
         FollowMouseRotate();
         FollowMouseMove();
     }
- 
+
     private void FollowMouseRotate()//用来让Rocket跟随鼠标旋转
     {
         if (Input.GetMouseButton(0))
@@ -44,7 +47,7 @@ public class RocketMove : MonoBehaviour
     private void FollowMouseMove()
     {
 
-        if (Input.GetMouseButton(0))//当鼠标左键按下时
+        if (Input.GetMouseButtonDown(0))//当且仅当鼠标左键按下时
         {
             //给予Rocket一个向着鼠标方向的力
             rb.AddForce(transform.up * pushForce, ForceMode2D.Force);
