@@ -10,6 +10,7 @@ public class RocketMove : MonoBehaviour
 
     [Header("基本参数")]
     public float pushForce;
+    public Vector3 direction;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class RocketMove : MonoBehaviour
             //获取火箭坐标，火箭坐标是世界坐标，需要转换为屏幕坐标
             Vector3 obj = Camera.main.WorldToScreenPoint(transform.position);
             //屏幕坐标向量相减，得到鼠标和火箭之间的连线向量
-            Vector3 direction = mouse - obj;
+            direction = mouse - obj;
             //将z轴赋值为0，置于平面空间内
             direction.z = 0f;
             //将目标向量长度变为1，这里只需要向量方向，不需要长度，所以变成1.
