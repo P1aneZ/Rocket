@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class RocketMove : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     //获取特效代码
     private RocketFireParticles rocketFireParticles;
 
     [Header("基本参数")]
     public float pushForce;
 
-    void Start()
+    private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         //获取特效代码
         rocketFireParticles = GetComponent<RocketFireParticles>();
     }
