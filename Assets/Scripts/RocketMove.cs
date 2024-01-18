@@ -41,8 +41,8 @@ public class RocketMove : MonoBehaviour
         //将目标向量长度变为1，这里只需要向量方向，不需要长度，所以变成1.
         direction = direction.normalized;
         //物体自身的y轴与目标向量一致，达到旋转效果
-        if (Input.GetMouseButton(0))
-            transform.up = direction;
+       /* if (Input.GetMouseButton(0))
+            transform.up = direction;*/
 
     }
 
