@@ -868,7 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticlesEffect: {fileID: 2472416973714407208, guid: 0853256a67c641541b84513164e55796, type: 3}
-  fireAppearAgainTime: 0.4
+  fireAppearAgainTime: 0.1
 --- !u!114 &802772936
 MonoBehaviour:
   m_ObjectHideFlags: 0

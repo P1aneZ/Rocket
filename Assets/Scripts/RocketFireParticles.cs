@@ -63,6 +63,8 @@ public class RocketFireParticles : MonoBehaviour
         //计算火箭底部中心点的坐标
         rocketBottomPosition = transform.position;
 
+        rocketMove.direction = transform.position.normalized;
+
         //计算偏移值
         bottomOffset.x = (rocketMove.direction.x / Mathf.Sqrt(rocketMove.direction.x * rocketMove.direction.x + rocketMove.direction.y * rocketMove.direction.y)) / rocketHalfLength;
         bottomOffset.y = (rocketMove.direction.y / Mathf.Sqrt(rocketMove.direction.x * rocketMove.direction.x + rocketMove.direction.y * rocketMove.direction.y)) / rocketHalfLength;
@@ -71,7 +73,7 @@ public class RocketFireParticles : MonoBehaviour
         rocketBottomPosition.y = transform.position.y - bottomOffset.y;
 
         //粒子效果方向和火箭移动方向相反
-        fireParticlesEffect.transform.right = rocketMove.direction;
+        fireParticlesEffect.transform.right = transform.up;
     }
 
 }
