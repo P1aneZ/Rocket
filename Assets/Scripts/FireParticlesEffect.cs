@@ -12,4 +12,12 @@ public class FireParticlesEffect : MonoBehaviour
         Destroy(gameObject,timeToDestroy);
     }
 
+    private void OnParticleCollision(GameObject other)
+    {
+        if(other.tag == "Enemy")
+        {
+            Debug.Log("¹¥»÷³É¹¦");
+        }
+    }
+
 }
