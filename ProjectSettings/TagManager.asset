@@ -14,8 +14,8 @@ TagManager:
   - UI
   - LandPointLayer
   - Enemy
-  - 
-  - 
+  - DestroyDeviceLayer
+  - SupplyDeviceLayer
   - 
   - 
   - 
