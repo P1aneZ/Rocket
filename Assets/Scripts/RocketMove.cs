@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class RocketMove : MonoBehaviour
 {
@@ -14,8 +11,6 @@ public class RocketMove : MonoBehaviour
     [Header("基本参数")]
     public float pushForce;
     public Vector3 direction;
-    public float cosAngle;
-    public float angle;
 
     private void Awake()
     {
@@ -45,24 +40,10 @@ public class RocketMove : MonoBehaviour
         direction.z = 0f;
         //将目标向量长度变为1，这里只需要向量方向，不需要长度，所以变成1.
         direction = direction.normalized;
-        /*
-        if (Input.GetMouseButton(1))
-        {
-            // transform.up = direction;
-            //创建临时变量faceDir，表示Rocket的x轴朝向
-            float faceDir = transform.localScale.x;
-            if (direction.x > 0f)
-            {
-                faceDir = 0.05f;
-            }
-            if (direction.x < 0f)
-            {
-                faceDir = -0.05f;
-            }
-            //更改图片比例，来让rocket实现翻转
-            transform.localScale = new Vector3(faceDir, 0.05f, 0f);
-        }
-        */
+        //物体自身的y轴与目标向量一致，达到旋转效果
+        if (Input.GetMouseButton(0))
+            transform.up = direction;
+
     }
 
     private void FollowMouseMove()
