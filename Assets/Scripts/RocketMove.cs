@@ -25,11 +25,9 @@ public class RocketMove : MonoBehaviour
         FollowMouseRotate();
         FollowMouseMove();
     }
- 
+
     private void FollowMouseRotate()//用来让Rocket跟随鼠标旋转
     {
-        if (Input.GetMouseButton(0))
-        {
             //获取鼠标位置，鼠标坐标是屏幕坐标,Z轴为0，这里不做转换 
             Vector3 mouse = Input.mousePosition;
             //获取火箭坐标，火箭坐标是世界坐标，需要转换为屏幕坐标
@@ -41,8 +39,7 @@ public class RocketMove : MonoBehaviour
             //将目标向量长度变为1，这里只需要向量方向，不需要长度，所以变成1.
             direction = direction.normalized;
             //物体自身的y轴与目标向量一致，达到旋转效果
-            transform.up = direction;
-        }
+            transform.up = direction;        
     }
 
     private void FollowMouseMove()
