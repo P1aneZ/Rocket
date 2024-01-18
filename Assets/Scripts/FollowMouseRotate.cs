@@ -12,9 +12,11 @@ public class FollowMouseRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        mouseX = Mathf.Clamp(mouseX, -1, 1);
-        transform.Rotate(0, 0,-mouseX);
+        if (Input.GetMouseButton(0))
+        {
+            mouseX = Input.GetAxis("Mouse X") * sensitivity;//持续获取鼠标移动水平分量
+            mouseX = Mathf.Clamp(mouseX, -1, 1);//将水平分量大小限定在-1到1之间
+            transform.Rotate(0, 0, -mouseX);//绕z轴旋转
+        }
     }
 }
