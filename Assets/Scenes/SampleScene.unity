@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70011f2c47c6d1b478613c835517f262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 2
+  pushForce: 0.2
   direction: {x: 0, y: 0, z: 0}
 --- !u!212 &802772931
 SpriteRenderer:

@@ -51,7 +51,7 @@ public class RocketMove : MonoBehaviour
             rocketFireParticles.PlayEffect();
 
             //给予Rocket一个向着鼠标方向的力
-            rb.AddForce(transform.up * pushForce, ForceMode2D.Force);
+            rb.AddForce(transform.up * pushForce, ForceMode2D.Impulse);
         }
 
     }
