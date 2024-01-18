@@ -47,19 +47,11 @@ public class RocketMove : MonoBehaviour
 
         if (Input.GetMouseButton(0))//当鼠标左键按下时
         {
-            //重置粒子特效播放
-            rocketFireParticles.finishPlayEffect = false;
+            //播放粒子特效播放
+            rocketFireParticles.PlayEffect();
 
             //给予Rocket一个向着鼠标方向的力
             rb.AddForce(transform.up * pushForce, ForceMode2D.Impulse);
-        }
-        
-        else
-        {
-            if (!rocketFireParticles.finishPlayEffect)
-            {
-                rocketFireParticles.PlayEffect();
-            }
         }
 
     }
