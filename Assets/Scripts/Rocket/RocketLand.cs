@@ -30,11 +30,11 @@ public class RocketLand : MonoBehaviour
     {
         if (landTime > 0)landTime -= Time.deltaTime;
         if (supplyTime > 0)supplyTime -= Time.deltaTime;
-        Land();
-        Destroy();
-        Supply();
+        IfLand();
+        IfDestroy();
+        IfSupply();
     }
-    private void Land() //检测到与着陆点碰撞就执行的函数
+    private void IfLand() //检测到与着陆点碰撞就执行的函数
     {
         if (physicsCheck.isWithLand)//假如判定在着陆装置范围内 
         {
@@ -52,7 +52,7 @@ public class RocketLand : MonoBehaviour
         
     }
 
-    private void Supply()
+    private void IfSupply()
     {
         if (physicsCheck.isWithSupplyDevice)//代码逻辑同Land();
         {
@@ -65,7 +65,7 @@ public class RocketLand : MonoBehaviour
         }
     }
 
-    private void Destroy()
+    private void IfDestroy()
     {
         if(physicsCheck.isWithDestroyDevice)
         {

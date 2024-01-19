@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   currentHealth: 0
+  isDead: 0
   invulnerableDuration: 5
   invulnerable: 0
 --- !u!61 &802772939
@@ -1118,6 +1119,7 @@ GameObject:
   - component: {fileID: 839426107}
   - component: {fileID: 839426106}
   - component: {fileID: 839426105}
+  - component: {fileID: 839426108}
   m_Layer: 0
   m_Name: "\u8D77\u98DE\u88C5\u7F6E"
   m_TagString: Untagged
@@ -1333,6 +1335,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &839426108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839426103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe3c21713dbbba44acfc2f47487fc3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087722328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,6 +2408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  isDead: 0
   invulnerableDuration: 5
   invulnerable: 0
 --- !u!114 &1695588483

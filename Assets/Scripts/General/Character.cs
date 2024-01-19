@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     [Header("基本属性")]
     public float maxHealth;
     public float currentHealth;
+    public bool isDead=false;
 
     [Header("受伤无敌")]
     public float invulnerableDuration;
@@ -46,7 +47,7 @@ public class Character : MonoBehaviour
         else
         {
             currentHealth = 0;
-            //触发死亡
+            isDead = true;//触发死亡
         }
 
 
