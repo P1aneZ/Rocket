@@ -9,7 +9,7 @@ public class Attack : MonoBehaviour
     public float attackRange;
     public float attackRate;
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)// 这里不喷火也能造成伤害--Berluga
     {
         other.GetComponent<Character>()?.TakeDamage(this);
     }
