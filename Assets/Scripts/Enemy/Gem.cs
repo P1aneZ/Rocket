@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gem : MonoBehaviour
 {
-    public Rigidbody2D RB;
+    private Rigidbody2D rb;
     public Transform target;
     public float speed;
 
@@ -17,7 +17,8 @@ public class Gem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("Rocket_0").GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.Find("Rocket_0").GetComponent<Transform>();//±¨´í£¬object reference not set to an instance of an object
     }
 
     // Update is called once per frame
