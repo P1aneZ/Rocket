@@ -71,16 +71,17 @@ public class EnemyWalk : MonoBehaviour
     {
         {
             transform.position = Vector2.MoveTowards
-                (transform.position, movePos[i].position, speed * Time.deltaTime);
+                (transform.position, movePos[i].position, speed * Time.deltaTime);//（初始位置，目标位置，移动速度）
         }
         if (Vector2.Distance(transform.position, movePos[i].position) < 0.1f)
         {
             if (waitTime > 0)
             {
-                waitTime -= Time.deltaTime;
+                waitTime -= Time.deltaTime;//在巡逻点等待
             }
             else
             {
+                //转向
                 if (movingRight)
                 {
                     transform.eulerAngles = new Vector3(0, -180, 0);

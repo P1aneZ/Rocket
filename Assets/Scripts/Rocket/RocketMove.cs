@@ -12,6 +12,8 @@ public class RocketMove : MonoBehaviour
     public float pushForce;
     public Vector3 direction;
 
+    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,9 +42,17 @@ public class RocketMove : MonoBehaviour
         direction.z = 0f;
         //将目标向量长度变为1，这里只需要向量方向，不需要长度，所以变成1.
         direction = direction.normalized;
-        //物体自身的y轴与目标向量一致，达到旋转效果
-         if (Input.GetMouseButton(0))
-            transform.up = direction;
+        
+        if (Input.GetMouseButton(0))
+        {
+            transform.up = direction;//物体自身的y轴与目标向量一致，达到旋转效果
+            rb.constraints = RigidbodyConstraints2D.None; //允许自由旋转      
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;//锁定z轴旋转
+
+        }
 
     }
 
