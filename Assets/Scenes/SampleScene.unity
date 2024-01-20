@@ -1136,7 +1136,7 @@ Transform:
   m_GameObject: {fileID: 839426103}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.97, y: -1.9699, z: 0}
+  m_LocalPosition: {x: -8.84, y: -2.05, z: 0}
   m_LocalScale: {x: 0.495, y: 0.495, z: 0.495}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1372,7 +1372,7 @@ Transform:
   m_GameObject: {fileID: 1087722328}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: -2.48, z: 0}
+  m_LocalPosition: {x: 0.46, y: -2.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1937,7 +1937,7 @@ Transform:
   m_GameObject: {fileID: 1618374885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.11, y: -2.48, z: 0}
+  m_LocalPosition: {x: -6.05, y: -2.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2424,10 +2424,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  chaseSpeed: 2
   waitTime: 0.5
   movePos:
   - {fileID: 1087722329}
   - {fileID: 1618374886}
+  isFind: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!60 &1695588484
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2525,6 +2528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95440cba86419a43b06c61eae5b42a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotRate: 2
   gem: {fileID: 1240588250442918233, guid: c76b146442bb9194bbceb0f77ddfb781, type: 3}
 --- !u!1 &1700209730
 GameObject:
