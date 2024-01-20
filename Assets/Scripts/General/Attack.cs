@@ -9,9 +9,22 @@ public class Attack : MonoBehaviour
     public float attackRange;
     public float attackRate;
 
+    //判断玩家是否在攻击（喷火）
+    public bool isAttack;
+
+    private void Update()
+    {
+        //如果检测到鼠标左键按下就标记为玩家正在攻击
+        if (Input.GetMouseButton(0))
+            isAttack = true;
+        else
+            isAttack = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)// 这里不喷火也能造成伤害--Berluga
     {
-        other.GetComponent<Character>()?.TakeDamage(this);
+        if (isAttack)
+            other.GetComponent<Character>()?.TakeDamage(this);
     }
 
 }
