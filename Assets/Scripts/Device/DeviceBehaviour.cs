@@ -26,7 +26,7 @@ public class DeviceBehaviour : MonoBehaviour
 
     private void TakeOff()
     {
-        rocket.transform.position=launchDevice.transform.position;//将火箭的坐标赋值为起飞装置的坐标
+        rocket.transform.position=new Vector3(launchDevice.transform.position.x, launchDevice.transform.position.y+0.25f, launchDevice.transform.position.z);//将火箭的坐标赋值为起飞装置的坐标
         //this指当前类
     }
 

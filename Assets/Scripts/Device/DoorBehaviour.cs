@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-    private RocketLand rocketLand;
 
     private Rigidbody2D rb;
 
-    private GameObject rocket;
-
-    private bool isDestroyed;
+    public bool isDestroyed=false;
 
     public bool isOpen;
+
 
     public float openTime;
     public float openDuration;
 
     private void Awake()
     {
-        rocketLand = GetComponent<RocketLand>();
+        openTime = 0;
         openDuration = 3.0f;
-        rocket = GameObject.Find("Rocket_0");
-        isDestroyed = rocket.GetComponent<RocketLand>().isDestroyed;
         rb=GetComponent<Rigidbody2D>();
     }
     // Start is called before the first frame update
@@ -34,6 +30,7 @@ public class DoorBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isDestroyed = GameObject.Find("Rocket_0").GetComponent<RocketLand>().isDestroyed;
         if (openTime > 0)
         {
             openTime-=Time .deltaTime;
@@ -41,7 +38,6 @@ public class DoorBehaviour : MonoBehaviour
         else
         {
             isOpen=false;
-            openTime = 0;
         }
         DoorOpen();
     }
@@ -56,10 +52,15 @@ public class DoorBehaviour : MonoBehaviour
         {
             isOpen=false;
         }
-        if (isOpen)
+        if (isOpen&&openTime>=0)
         {
             if(openTime==0)openTime=openDuration;
-            rb.transform.position=new Vector3(rb.transform.position.x,rb.transform.position.y+2,rb.transform.position.z);
+            rb.velocity = new Vector3(0, 2f, 0);
+            //rb.transform.position=new Vector3(rb.transform.position.x,rb.transform.position.y+0.2f,rb.transform.position.z);
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
         }
     }
 
