@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    private RocketLand rocketLand;
     //最大生命值，当前生命值，是否死亡的状态
     [Header("基本属性")]
     public float maxHealth;
@@ -33,6 +34,7 @@ public class Character : MonoBehaviour
         {
             invulnerable = false;
         }
+        isDead = rocketLand.GetComponent<RocketLand>().isDestroyed;//只要火箭判定和摧毁装置碰撞，直接判定死亡
     }
 
     public void TakeDamage(Attack attacker)
@@ -44,6 +46,7 @@ public class Character : MonoBehaviour
         //如果扣血扣不死
         if(currentHealth - attacker.damage > 0)
         {
+            if (isDead) currentHealth = 0;
             //扣血
             currentHealth -= attacker.damage;
             //触发无敌
