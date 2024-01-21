@@ -46,4 +46,10 @@ public class ImportMap : EditorWindow
             }
         }
     }
+
+    private void OnSelectionChange()
+    {
+        //重载该函数，实时显示选中的物体
+        this.Repaint();
+    }
 }
