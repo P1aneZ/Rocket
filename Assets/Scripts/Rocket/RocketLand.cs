@@ -15,7 +15,7 @@ public class RocketLand : MonoBehaviour
     [Header("判断是否成功")]
     public bool isLand;//成功着陆
     public bool isSupplied;//成功补给
-    public bool isDestroyed;//成功摧毁
+    public bool isDestroyed  = false;//成功摧毁
 
 
     private void Awake()
