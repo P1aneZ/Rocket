@@ -32,7 +32,7 @@ public class ExportMap : EditorWindow
         writePath = GUILayout.TextField (writePath);
         GUILayout.Label("地图文件前缀");
         prefix = GUILayout.TextField(prefix);
-        GUILayout.Label("关卡数字（1~N）");
+        GUILayout.Label("设置关卡数（1~N）");
         levelNum = GUILayout.TextField(levelNum);
 
         string fileName = writePath + prefix + levelNum + ".csv";
