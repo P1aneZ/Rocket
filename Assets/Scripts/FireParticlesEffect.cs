@@ -9,15 +9,9 @@ public class FireParticlesEffect : MonoBehaviour
 
     void Start()
     {
+        //特效持续时间结束就destroy特效
         Destroy(gameObject,timeToDestroy);
     }
 
-    private void OnParticleCollision(GameObject other)
-    {
-        if(other.tag == "Enemy")
-        {
-            Debug.Log("攻击成功");
-        }
-    }
 
 }

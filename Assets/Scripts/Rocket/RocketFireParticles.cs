@@ -7,17 +7,16 @@ using UnityEngine.UIElements;
 
 public class RocketFireParticles : MonoBehaviour
 {
+    //获取火箭移动方向
+    private RocketMove rocketMove;
+    //获取粒子特效生命周期
+    private FireParticlesEffect fireEffect;
     //获得火焰粒子
     public GameObject fireParticlesEffect;
 
     //计算火箭底部的坐标
     private Vector3 rocketBottomPosition;
     private Vector3 bottomOffset;
-
-    //获取火箭移动方向
-    private RocketMove rocketMove;
-    //获取粒子特效生命周期
-    private FireParticlesEffect fireEffect;
 
     //火箭半身长
     private float rocketHalfLength = 1;
@@ -32,6 +31,7 @@ public class RocketFireParticles : MonoBehaviour
 
     private void Awake()
     {
+        //获取组件，初始化火箭底部与中心的偏移值
         rocketMove = GetComponent<RocketMove>();
         fireEffect = fireParticlesEffect.GetComponent<FireParticlesEffect>();
         bottomOffset = new Vector3();
@@ -39,6 +39,7 @@ public class RocketFireParticles : MonoBehaviour
 
     private void Update()
     {
+        //调整火焰的角度
         ControlFireAngle();
 
         //计时器倒计时
@@ -53,6 +54,7 @@ public class RocketFireParticles : MonoBehaviour
             //播放粒子特效
             Instantiate(fireParticlesEffect, rocketBottomPosition, Quaternion.identity);
             firstPlay = false;
+            //重置计时器
             playCounter = fireAppearAgainTime;
         }
 
@@ -62,8 +64,6 @@ public class RocketFireParticles : MonoBehaviour
     {
         //计算火箭底部中心点的坐标
         rocketBottomPosition = transform.position;
-
-        //rocketMove.direction = transform.position.normalized;
 
         //计算偏移值
         bottomOffset.x = (rocketMove.direction.x / Mathf.Sqrt(rocketMove.direction.x * rocketMove.direction.x + rocketMove.direction.y * rocketMove.direction.y)) / rocketHalfLength;
