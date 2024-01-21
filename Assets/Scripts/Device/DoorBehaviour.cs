@@ -58,12 +58,12 @@ public class DoorBehaviour : MonoBehaviour
         if (isOpen&&openTime>=0)
         {
             if(openTime==0)openTime=openDuration;
-            rb.velocity = new Vector3(0, 2f, 0);
+            rb.velocity = new Vector3(0, 2f, 0);//赋予一个向上的速度
             //rb.transform.position=new Vector3(rb.transform.position.x,rb.transform.position.y+0.2f,rb.transform.position.z);
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = Vector3.zero;//如果不是开门状态，持续把门的速度设为0
         }
     }
 
