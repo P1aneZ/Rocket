@@ -11,6 +11,8 @@ public class DoorBehaviour : MonoBehaviour
 
     public bool isOpen;
 
+    private RocketLand rocketLand;
+
 
     public float openTime;
     public float openDuration;
@@ -20,6 +22,7 @@ public class DoorBehaviour : MonoBehaviour
         openTime = 0;
         openDuration = 3.0f;
         rb=GetComponent<Rigidbody2D>();
+        rocketLand = GameObject.Find("Rocket_0").GetComponent<RocketLand>();
     }
     // Start is called before the first frame update
     void Start()
@@ -30,7 +33,7 @@ public class DoorBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isDestroyed = GameObject.Find("Rocket_0").GetComponent<RocketLand>().isDestroyed;
+        //isDestroyed = GameObject.Find("Rocket_0").GetComponent<RocketLand>().isDestroyed;
         if (openTime > 0)
         {
             openTime-=Time .deltaTime;
@@ -39,12 +42,12 @@ public class DoorBehaviour : MonoBehaviour
         {
             isOpen=false;
         }
-        DoorOpen();
+        DoorOpen(rocketLand);
     }
 
-    private void DoorOpen()
+    private void DoorOpen(RocketLand rocketLand)
     {
-        if (isDestroyed)//持续检测装置是否被摧毁，仅摧毁时判定开门
+        if (rocketLand.isDestroyed)//持续检测装置是否被摧毁，仅摧毁时判定开门
         {
             isOpen = true;
         }
