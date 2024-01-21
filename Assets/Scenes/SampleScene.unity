@@ -764,6 +764,9 @@ MonoBehaviour:
   rb: {fileID: 0}
   pushForce: 0.15
   direction: {x: 0, y: 0, z: 0}
+  isHurt: 0
+  hurtForce: 10
+  isDead: 0
 --- !u!212 &802772931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1042,11 +1045,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7cf1c3a2087d247958185c41a912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 20
   currentHealth: 0
   isDead: 0
   invulnerableDuration: 5
   invulnerable: 0
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802772930}
+        m_TargetAssemblyTypeName: RocketMove, Assembly-CSharp
+        m_MethodName: GetHurt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802772930}
+        m_TargetAssemblyTypeName: RocketMove, Assembly-CSharp
+        m_MethodName: RocketDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &802772939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1401,6 +1434,12 @@ MonoBehaviour:
   isDead: 0
   invulnerableDuration: 0
   invulnerable: 0
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1464218990
 GameObject:
   m_ObjectHideFlags: 3
@@ -2010,6 +2049,12 @@ MonoBehaviour:
   isDead: 0
   invulnerableDuration: 5
   invulnerable: 0
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1695588483
 MonoBehaviour:
   m_ObjectHideFlags: 0

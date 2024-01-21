@@ -12,7 +12,10 @@ public class RocketMove : MonoBehaviour
     public float pushForce;
     public Vector3 direction;
 
-    
+    public bool isHurt;
+    public float hurtForce;
+
+    public bool isDead=false;
 
     private void Awake()
     {
@@ -24,8 +27,12 @@ public class RocketMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FollowMouseRotate();
-        FollowMouseMove();
+        //if (!isHurt)
+        if(!isDead)
+        {
+            FollowMouseRotate();
+            FollowMouseMove();
+        }
     }
 
     private void FollowMouseRotate()//用来让Rocket跟随鼠标旋转
@@ -69,4 +76,19 @@ public class RocketMove : MonoBehaviour
         }
 
     }
+
+    public void GetHurt(Transform attacker)
+    {
+        isHurt = true;
+        rb.velocity = Vector2.zero;
+        Vector2 dir = new Vector2((transform.position.x - attacker.position.x), (transform.position.y - attacker.position.y)).normalized;
+
+        rb.AddForce(dir*hurtForce, ForceMode2D.Impulse);
+    }
+
+    public void RocketDead()
+    {
+        isDead = true;        
+    }
+
 }
