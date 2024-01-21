@@ -5,11 +5,11 @@ using UnityEngine;
 public class PhysicsCheck : MonoBehaviour
 {
     [Header("判断是否碰撞")]
-    public bool isWithLand;//进入着陆装置判定区域与否
+    public bool isWithLand = false;//进入着陆装置判定区域与否
 
-    public bool isWithDestroyDevice;
+    public bool isWithDestroyDevice=false;
 
-    public bool isWithSupplyDevice;
+    public bool isWithSupplyDevice = false;
 
     [Header("判断碰撞的Layer")]
     public LayerMask LandPointLayer;//着陆装置所在的层
