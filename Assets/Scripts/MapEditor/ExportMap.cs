@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using JetBrains.Annotations;
+using UnityEditor.SceneManagement;
 
 public class ExportMap : EditorWindow
 {
@@ -54,7 +55,7 @@ public class ExportMap : EditorWindow
                 Debug.Log("正在清理地图....");
                 ClearMapUtil.clearMapRoot(Selection.activeGameObject);
                 //使用代码来保存场景
-                EditorApplication.SaveScene(EditorApplication.currentScene);
+                EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
                 Debug.Log("清理地图成功!!");
             }
         }
