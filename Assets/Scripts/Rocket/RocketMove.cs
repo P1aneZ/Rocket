@@ -9,13 +9,17 @@ public class RocketMove : MonoBehaviour
     private RocketFireParticles rocketFireParticles;
 
     [Header("基本参数")]
+    
     public float pushForce;
     public Vector3 direction;
 
     public bool isHurt;
     public float hurtForce;
 
-    public bool isDead=false;
+    public bool isDead = false;
+
+    
+
 
     private void Awake()
     {
@@ -28,7 +32,7 @@ public class RocketMove : MonoBehaviour
     void Update()
     {
         //if (!isHurt)
-        if(!isDead)
+        if (!isDead)
         {
             FollowMouseRotate();
             FollowMouseMove();
@@ -49,7 +53,7 @@ public class RocketMove : MonoBehaviour
         direction.z = 0f;
         //将目标向量长度变为1，这里只需要向量方向，不需要长度，所以变成1.
         direction = direction.normalized;
-        
+
         if (Input.GetMouseButton(0))
         {
             transform.up = direction;//物体自身的y轴与目标向量一致，达到旋转效果
@@ -68,6 +72,7 @@ public class RocketMove : MonoBehaviour
 
         if (Input.GetMouseButton(0))//当鼠标左键按下时
         {
+
             //播放粒子特效播放
             rocketFireParticles.PlayEffect();
 
@@ -80,15 +85,19 @@ public class RocketMove : MonoBehaviour
     public void GetHurt(Transform attacker)
     {
         isHurt = true;
-        rb.velocity = Vector2.zero;
-        Vector2 dir = new Vector2((transform.position.x - attacker.position.x), (transform.position.y - attacker.position.y)).normalized;
+        if (attacker.gameObject.tag == "Gem")
+        {
+            rb.velocity = Vector2.zero;
+            Vector2 dir = new Vector2((transform.position.x - attacker.position.x), (transform.position.y - attacker.position.y)).normalized;
 
-        rb.AddForce(dir*hurtForce, ForceMode2D.Impulse);
+            rb.AddForce(dir * hurtForce, ForceMode2D.Impulse);
+        }
+
     }
 
     public void RocketDead()
     {
-        isDead = true;        
+        isDead = true;
     }
 
 }

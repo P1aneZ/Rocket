@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Rocket
+  - Wall
+  - Gem
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Enemy
   - DestroyDeviceLayer
   - SupplyDeviceLayer
-  - 
+  - Wall
   - 
   - 
   - 
