@@ -118,7 +118,7 @@ TextureImporter:
         width: 220
         height: 397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setting_1
+      name: smoke1
       rect:
         serializedVersion: 2
         x: 253
@@ -139,7 +139,7 @@ TextureImporter:
         width: 70
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 189
         height: 337
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,8 +184,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Setting_0: -308758277
-      Setting_1: -758963715
       Setting_2: 1357536788
+      smoke1: -758963715
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
