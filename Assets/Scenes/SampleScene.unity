@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 802772937}
   - component: {fileID: 802772935}
   - component: {fileID: 802772940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rocket_0
   m_TagString: Rocket
   m_Icon: {fileID: 0}
