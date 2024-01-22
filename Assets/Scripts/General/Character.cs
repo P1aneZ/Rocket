@@ -19,6 +19,9 @@ public class Character : MonoBehaviour
     private float invulnerableCounter;
     public bool invulnerable;
 
+    //获得受伤粒子动画
+    public GameObject isHurtParticlesEffect;
+
     public UnityEvent<Transform> OnTakeDamage;
     public UnityEvent OnDie;
 
@@ -64,6 +67,12 @@ public class Character : MonoBehaviour
             currentHealth = 0;
             isDead = true;//触发死亡
             OnDie?.Invoke();
+        }
+
+        if(this.tag == "Rocket" && isHurtParticlesEffect != null)
+        {
+            //播放粒子特效
+            Instantiate(isHurtParticlesEffect,this.transform.position , Quaternion.identity);
         }
 
 

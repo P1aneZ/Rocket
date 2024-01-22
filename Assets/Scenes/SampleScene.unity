@@ -1118,6 +1118,7 @@ MonoBehaviour:
   isDead: 0
   invulnerableDuration: 5
   invulnerable: 0
+  isHurtParticlesEffect: {fileID: 9062348628225875589, guid: f54262d7f96b54048beee272dabf9ecb, type: 3}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -1503,6 +1504,7 @@ MonoBehaviour:
   isDead: 0
   invulnerableDuration: 0
   invulnerable: 0
+  isHurtParticlesEffect: {fileID: 0}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -2178,6 +2180,7 @@ MonoBehaviour:
   isDead: 0
   invulnerableDuration: 5
   invulnerable: 0
+  isHurtParticlesEffect: {fileID: 0}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -2641,7 +2644,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
