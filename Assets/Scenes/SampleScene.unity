@@ -810,6 +810,8 @@ GameObject:
   - component: {fileID: 802772937}
   - component: {fileID: 802772935}
   - component: {fileID: 802772940}
+  - component: {fileID: 802772942}
+  - component: {fileID: 802772941}
   m_Layer: 11
   m_Name: Rocket_0
   m_TagString: Rocket
@@ -1119,6 +1121,7 @@ MonoBehaviour:
   invulnerableDuration: 5
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 9062348628225875589, guid: f54262d7f96b54048beee272dabf9ecb, type: 3}
+  deadParticlesEffect: {fileID: 7400032590495207592, guid: c1a3ed2a6c5c6634db0e8d30c756e645, type: 3}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -1126,6 +1129,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: RocketMove, Assembly-CSharp
         m_MethodName: GetHurt
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 802772942}
+        m_TargetAssemblyTypeName: RocketAnimation, Assembly-CSharp
+        m_MethodName: PlayHurt
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1210,6 +1225,40 @@ MonoBehaviour:
   attackRange: 0
   attackRate: 0
   isAttack: 0
+--- !u!95 &802772941
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802772929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98f3f06c1b4d1174f9022e0024e2af64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &802772942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802772929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0b5bae4faea204199530b92889be69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 802772941}
 --- !u!4 &839426104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2773537094977252802, guid: c402bf5dce97dda4c9859e9fc677d39e, type: 3}
@@ -1505,6 +1554,7 @@ MonoBehaviour:
   invulnerableDuration: 0
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 0}
+  deadParticlesEffect: {fileID: 0}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -2181,6 +2231,7 @@ MonoBehaviour:
   invulnerableDuration: 5
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 0}
+  deadParticlesEffect: {fileID: 0}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []

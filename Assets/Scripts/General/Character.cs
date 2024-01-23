@@ -21,7 +21,12 @@ public class Character : MonoBehaviour
 
     //获得受伤粒子动画
     public GameObject isHurtParticlesEffect;
+    //获得死亡粒子动画
+    public GameObject deadParticlesEffect;
+    //执行完一遍死亡动画就不执行了
+    private bool isBoom = false;
 
+    //受伤和死亡事件
     public UnityEvent<Transform> OnTakeDamage;
     public UnityEvent OnDie;
 
@@ -69,10 +74,20 @@ public class Character : MonoBehaviour
             OnDie?.Invoke();
         }
 
-        if(this.tag == "Rocket" && isHurtParticlesEffect != null)
+        if(this.tag == "Rocket" && isHurtParticlesEffect != null && deadParticlesEffect != null)
         {
             //播放粒子特效
-            Instantiate(isHurtParticlesEffect,this.transform.position , Quaternion.identity);
+            if(isDead && (isBoom == false))
+            {
+                Instantiate(deadParticlesEffect,this.transform.position , Quaternion.identity);
+                isBoom = true;
+            }
+            else
+            {
+                if(!isDead)
+                    Instantiate(isHurtParticlesEffect, this.transform.position, Quaternion.identity);
+            }
+
         }
 
 
