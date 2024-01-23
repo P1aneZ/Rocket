@@ -21,9 +21,9 @@ TagManager:
   - SupplyDeviceLayer
   - Wall
   - Player
-  - 
-  - 
-  - 
+  - Platform
+  - Back
+  - Front
   - 
   - 
   - 
