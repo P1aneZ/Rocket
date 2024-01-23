@@ -72,6 +72,8 @@ public class RocketMove : MonoBehaviour
 
         if (Input.GetMouseButton(0))//当鼠标左键按下时
         {
+            //播放移动音效
+            SoundManager.PlayRocketMoving();
 
             //播放粒子特效播放
             rocketFireParticles.PlayEffect();

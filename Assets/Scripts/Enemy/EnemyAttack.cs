@@ -20,6 +20,7 @@ public class EnemyAttack : MonoBehaviour
         shotTime += Time.deltaTime;
         if(shotTime>shotRate)
         {
+            SoundManager.PlayEnemyAttackFemale();//播放女敌人攻击音效
             Instantiate(gem,transform.position,Quaternion.identity);//在敌人位置生成子弹
             shotTime = 0;//计时归0
         }

@@ -58,6 +58,7 @@ public class DoorBehaviour : MonoBehaviour
         if (isOpen&&openTime>=0)
         {
             if(openTime==0)openTime=openDuration;
+            SoundManager.PlayDoorOpen();//播放开门音效
             rb.velocity = new Vector3(0, 2f, 0);//赋予一个向上的速度
             //rb.transform.position=new Vector3(rb.transform.position.x,rb.transform.position.y+0.2f,rb.transform.position.z);
         }
