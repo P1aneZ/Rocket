@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyWalk : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class EnemyWalk : MonoBehaviour
     public float chaseSpeed;
     public float waitTime;
     public Transform[] movePos;
+    public float velocity;
 
     private int i = 0;
     private bool movingRight = true;
@@ -25,7 +27,7 @@ public class EnemyWalk : MonoBehaviour
 
     void Start()
     {
-        wait = waitTime;       
+        wait = waitTime;
     }
 
     // Update is called once per frame
@@ -39,14 +41,14 @@ public class EnemyWalk : MonoBehaviour
         {
             Follow();//这是跟随函数
             followTime += Time.deltaTime;
-            if(followTime > maxFollowTime)
+            if (followTime > maxFollowTime)
             {
                 isFind = false;
                 followTime = 0;
             }
         }
-
-        if (Speed() != 0)
+        velocity = Speed();
+        if (velocity != 0)
         {
             if (!EnemySound.audioSrc.isPlaying)
             {
@@ -64,12 +66,16 @@ public class EnemyWalk : MonoBehaviour
             if (gameObject.transform.position.x < target.x)
             {
                 position.x += speed;
-                gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);//敌人转向
+                gameObject.transform.localRotation = Quaternion.Euler(0, -180, 0);
+                movingRight = true;
+                //敌人转向
             }
-            else if (gameObject.transform.position.x >target.x)
+            else if (gameObject.transform.position.x > target.x)
             {
                 position.x -= speed;
-                gameObject.transform.localRotation = Quaternion.Euler(0, -180, 0);//敌人转向
+                gameObject.transform.localRotation = Quaternion.Euler(0, -0, 0);
+                movingRight = false;
+                //敌人转向
             }
             transform.position = Vector2.MoveTowards
                 (transform.position, position, chaseSpeed * Time.deltaTime);
@@ -94,12 +100,12 @@ public class EnemyWalk : MonoBehaviour
                 //转向
                 if (movingRight)
                 {
-                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    gameObject.transform.localRotation = Quaternion.Euler(0, -0, 0);
                     movingRight = false;
                 }
                 else
                 {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    gameObject.transform.localRotation = Quaternion.Euler(0, -180, 0);
                     movingRight = true;
                 }
 
@@ -115,6 +121,20 @@ public class EnemyWalk : MonoBehaviour
                 waitTime = wait;
             }
         }
+        else 
+        {
+            if (gameObject.transform.position.x < movePos[i].position.x)
+            {
+                gameObject.transform.localRotation = Quaternion.Euler(0, -180, 0);
+                movingRight = true;
+            }
+            else if (gameObject.transform.position.x > movePos[i].position.x)
+            {               
+                gameObject.transform.localRotation = Quaternion.Euler(0, -0, 0);
+                movingRight = false;
+                //敌人转向
+            }
+        }
     }
 
 
@@ -126,7 +146,7 @@ public class EnemyWalk : MonoBehaviour
         }
     }
 
-    float Speed()
+    public float Speed()
     {
 
         curpos = gameObject.transform.position;//当前点

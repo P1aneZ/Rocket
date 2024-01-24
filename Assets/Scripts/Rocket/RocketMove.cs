@@ -10,6 +10,8 @@ public class RocketMove : MonoBehaviour
     public SceneLoadEventSO loadEvent;
     //场景是否加载完成
     public VoidEventSO afterSceneLoadedEvent;
+    //是否进入游玩场景
+    public VoidEventSO beginPlayGame;
 
     public Rigidbody2D rb;
     //获取特效代码
@@ -25,6 +27,7 @@ public class RocketMove : MonoBehaviour
 
     public bool isDead = false;
     private bool isLoad = false;
+    private bool isPlay = false;
 
     private void Awake()
     {
@@ -37,7 +40,7 @@ public class RocketMove : MonoBehaviour
     void Update()
     {
         //if (!isHurt)
-        if (!isDead && !isLoad)
+        if (!isDead && !isLoad && isPlay)
         {
             FollowMouseRotate();
             FollowMouseMove();
@@ -48,12 +51,14 @@ public class RocketMove : MonoBehaviour
     {
         loadEvent.LoadRequestEvent += OnLoadEvent;
         afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoadedEvent;
+        beginPlayGame.OnEventRaised += beginPlay;
     }
 
     private void OnDisable()
     {
         loadEvent.LoadRequestEvent -= OnLoadEvent;
         afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
+        beginPlayGame.OnEventRaised -= beginPlay;
     }
 
     private void FollowMouseRotate()//用来让Rocket跟随鼠标旋转
@@ -130,5 +135,10 @@ public class RocketMove : MonoBehaviour
     private void OnAfterSceneLoadedEvent()
     {
         isLoad = false;
+    }
+
+    private void beginPlay()
+    {
+        isPlay = true;
     }
 }
