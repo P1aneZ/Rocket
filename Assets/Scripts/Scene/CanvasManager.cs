@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IICameraController : MonoBehaviour
+public class CanvasManager : MonoBehaviour
 {
     [Header("ÊÂ¼þ¼àÌý")]
     public VoidEventSO gameStartEvent;
