@@ -15,7 +15,7 @@ public class RocketLand : MonoBehaviour
     [Header("判断是否成功")]
     public bool isLand=false;//成功着陆
     public bool isSupplied=false;//成功补给
-    public bool isDestroyed=false;//成功摧毁
+    public bool isDestroyed;//成功摧毁
 
 
     private void Awake()
@@ -65,11 +65,16 @@ public class RocketLand : MonoBehaviour
         }
     }
 
-    private void IfDestroy()
+    public void IfDestroy()
     {
         if(physicsCheck.isWithDestroyDevice)
         {
             isDestroyed = true;//判定为已经摧毁
         }
+    }
+
+    public void CheckDestoryDeviceDead()
+    {
+        isDestroyed = true;
     }
 }
