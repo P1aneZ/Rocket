@@ -1,9 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RocketMove : MonoBehaviour
 {
+    [Header("监听事件")]
+    //场景是否正在加载
+    public SceneLoadEventSO loadEvent;
+    //场景是否加载完成
+    public VoidEventSO afterSceneLoadedEvent;
+
     public Rigidbody2D rb;
     //获取特效代码
     private RocketFireParticles rocketFireParticles;
@@ -17,9 +24,7 @@ public class RocketMove : MonoBehaviour
     public float hurtForce;
 
     public bool isDead = false;
-
-    
-
+    private bool isLoad = false;
 
     private void Awake()
     {
@@ -32,16 +37,27 @@ public class RocketMove : MonoBehaviour
     void Update()
     {
         //if (!isHurt)
-        if (!isDead)
+        if (!isDead && !isLoad)
         {
             FollowMouseRotate();
             FollowMouseMove();
         }
     }
 
+    private void OnEnable()
+    {
+        loadEvent.LoadRequestEvent += OnLoadEvent;
+        afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoadedEvent;
+    }
+
+    private void OnDisable()
+    {
+        loadEvent.LoadRequestEvent -= OnLoadEvent;
+        afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
+    }
+
     private void FollowMouseRotate()//用来让Rocket跟随鼠标旋转
     {
-
 
         //获取鼠标位置，鼠标坐标是屏幕坐标,Z轴为0，这里不做转换 
         Vector3 mouse = Input.mousePosition;
@@ -106,4 +122,13 @@ public class RocketMove : MonoBehaviour
         isDead = true;
     }
 
+    private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
+    {
+        isLoad = true;
+    }
+
+    private void OnAfterSceneLoadedEvent()
+    {
+        isLoad = false;
+    }
 }
