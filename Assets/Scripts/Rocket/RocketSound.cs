@@ -37,10 +37,7 @@ public class RocketSound : MonoBehaviour
         audioSrc.PlayOneShot(rocketMoving);
     }
 
-    public static void StopPlayRocketMoving()
-    {
-        audioSrc.Stop();
-    }
+
 
     public static void PlayRocketExplosion()
     {

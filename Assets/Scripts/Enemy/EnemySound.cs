@@ -13,6 +13,7 @@ public class EnemySound : MonoBehaviour
     public static AudioClip enemyHurtFemale1;
     public static AudioClip enemyHurtFemale2;
     public static AudioClip enemyHurtFemale3;
+    public static AudioClip enemyWalkingGrass;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemySound : MonoBehaviour
         enemyHurtFemale1 = Resources.Load<AudioClip>("Enemy_Hurt_Female1");
         enemyHurtFemale2 = Resources.Load<AudioClip>("Enemy_Hurt_Female2");
         enemyHurtFemale3 = Resources.Load<AudioClip>("Enemy_Hurt_Female3");
+        enemyWalkingGrass=Resources.Load<AudioClip>("Enemy_Walking_Grass");
     }
 
     // Update is called once per frame
@@ -52,5 +54,10 @@ public class EnemySound : MonoBehaviour
             audioSrc.PlayOneShot(enemyHurtFemale2);
         else if (a == 3)
             audioSrc.PlayOneShot(enemyHurtFemale3);
+    }
+
+    public static void PlayEnemyWalkingGrass()
+    {
+        audioSrc.PlayOneShot(enemyWalkingGrass);
     }
 }

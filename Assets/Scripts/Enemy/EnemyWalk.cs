@@ -16,6 +16,8 @@ public class EnemyWalk : MonoBehaviour
     public bool isFind = false;
 
     public Vector3 target;
+    public Vector3 curpos;
+    public Vector3 lastpos;
 
     private float maxFollowTime = 5.0f;
     private float followTime;
@@ -41,6 +43,14 @@ public class EnemyWalk : MonoBehaviour
             {
                 isFind = false;
                 followTime = 0;
+            }
+        }
+
+        if (Speed() != 0)
+        {
+            if (!EnemySound.audioSrc.isPlaying)
+            {
+                EnemySound.PlayEnemyWalkingGrass();
             }
         }
 
@@ -115,5 +125,15 @@ public class EnemyWalk : MonoBehaviour
             isFind = true;
         }
     }
+
+    float Speed()
+    {
+
+        curpos = gameObject.transform.position;//当前点
+        float _speed = (Vector3.Magnitude(curpos - lastpos) / Time.deltaTime);//与上一个点做计算除去当前帧花的时间。
+        lastpos = curpos;//把当前点保存下一次用
+        return _speed;
+    }
+
 
 }
