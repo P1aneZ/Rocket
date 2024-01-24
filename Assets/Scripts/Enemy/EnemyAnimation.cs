@@ -11,6 +11,10 @@ public class EnemyAnimation : MonoBehaviour
 
     private EnemyWalk enemyWalk;
 
+    private Character character;
+
+    private EnemyAttack enemyAttack;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +22,8 @@ public class EnemyAnimation : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         enemyWalk= GetComponent<EnemyWalk>();
-
+        character= GetComponent<Character>();
+        enemyAttack= GetComponent<EnemyAttack>();   
     }
 
     // Update is called once per frame
@@ -29,6 +34,17 @@ public class EnemyAnimation : MonoBehaviour
     public void SetAnimation()
     {
         anim.SetFloat("velocityX", Mathf.Abs(enemyWalk.velocity));
+        anim.SetBool("isDead", character.isDead);
+        anim.SetBool("isAttack",enemyAttack.isAttack);
+    }
 
+    public void EnemyHurt()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+    public void EnemyAttack()
+    {
+        anim.SetTrigger("Attack");
     }
 }
