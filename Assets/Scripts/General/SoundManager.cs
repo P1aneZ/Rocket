@@ -69,7 +69,12 @@ public class SoundManager : MonoBehaviour
 
     public static void PlayRocketMoving()
     {
+        audioSrc.PlayOneShot(rocketMoving);
+    }
 
+    public static void StopPlayRocketMoving()
+    {
+        audioSrc.Stop();
     }
 
     public static void PlayRocketExplosion()
