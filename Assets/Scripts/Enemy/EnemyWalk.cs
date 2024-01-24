@@ -56,9 +56,9 @@ public class EnemyWalk : MonoBehaviour
             velocity = Speed();
             if (velocity != 0)
             {
-                if (!EnemySound.audioSrc.isPlaying)
+                if (!EnemySoundMale.audioSrc.isPlaying)
                 {
-                    EnemySound.PlayEnemyWalkingGrass();
+                    EnemySoundMale.PlayEnemyWalkingGrass();//播放行走在草地上的音乐
                 }
             }
         }
