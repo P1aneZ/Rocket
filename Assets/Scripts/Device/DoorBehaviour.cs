@@ -19,8 +19,8 @@ public class DoorBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        openTime = 0;
-        openDuration = 3.0f;
+        //openTime = 0;
+        //openDuration = 3.0f;
         rb=GetComponent<Rigidbody2D>();
         rocketLand = GameObject.Find("Rocket_0").GetComponent<RocketLand>();
     }
@@ -34,14 +34,14 @@ public class DoorBehaviour : MonoBehaviour
     void Update()
     {
         //isDestroyed = GameObject.Find("Rocket_0").GetComponent<RocketLand>().isDestroyed;
-        if (openTime > 0)
+       /* if (openTime > 0)
         {
             openTime-=Time .deltaTime;
         }
         else
         {
             isOpen=false;
-        }
+        }*/
         DoorOpen(rocketLand);
     }
 
@@ -55,17 +55,26 @@ public class DoorBehaviour : MonoBehaviour
         {
             isOpen=false;
         }
-        if (isOpen&&openTime>=0)
-        {
-            if(openTime==0)openTime=openDuration;
+        if (isOpen)//&&openTime>=0)
+        { 
+
             DoorSound.PlayDoorOpen();//播放开门音效
-            rb.velocity = new Vector3(0, 2f, 0);//赋予一个向上的速度
-            //rb.transform.position=new Vector3(rb.transform.position.x,rb.transform.position.y+0.2f,rb.transform.position.z);
+
+
+           //if(openTime==0)openTime=openDuration;
+                       //rb.velocity = new Vector3(0, 2f, 0);//赋予一个向上的速度
+           //rb.transform.position=new Vector3(rb.transform.position.x,rb.transform.position.y+0.2f,rb.transform.position.z);
         }
-        else
-        {
-            rb.velocity = Vector3.zero;//如果不是开门状态，持续把门的速度设为0
-        }
+        //else
+        //{
+           // rb.velocity = Vector3.zero;//如果不是开门状态，持续把门的速度设为0
+        //}
+    }
+
+    public void AfterDoorOpen()
+    {
+        isOpen = false;
+        Destroy(this.gameObject);
     }
 
 }

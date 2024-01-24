@@ -43,8 +43,5 @@ public class EnemyAnimation : MonoBehaviour
         anim.SetTrigger("Hurt");
     }
 
-    public void EnemyAttack()
-    {
-        anim.SetTrigger("Attack");
-    }
+    
 }
