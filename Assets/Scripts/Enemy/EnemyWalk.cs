@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -24,35 +25,41 @@ public class EnemyWalk : MonoBehaviour
     private float maxFollowTime = 5.0f;
     private float followTime;
 
+    public Character character;
+
 
     void Start()
     {
         wait = waitTime;
+        character = GetComponent<Character>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isFind == false)
+        if (!character.isDead)
         {
-            Move();//这是巡逻函数
-        }
-        else if (isFind == true)
-        {
-            Follow();//这是跟随函数
-            followTime += Time.deltaTime;
-            if (followTime > maxFollowTime)
+            if (isFind == false)
             {
-                isFind = false;
-                followTime = 0;
+                Move();//这是巡逻函数
             }
-        }
-        velocity = Speed();
-        if (velocity != 0)
-        {
-            if (!EnemySound.audioSrc.isPlaying)
+            else if (isFind == true)
             {
-                EnemySound.PlayEnemyWalkingGrass();
+                Follow();//这是跟随函数
+                followTime += Time.deltaTime;
+                if (followTime > maxFollowTime)
+                {
+                    isFind = false;
+                    followTime = 0;
+                }
+            }
+            velocity = Speed();
+            if (velocity != 0)
+            {
+                if (!EnemySound.audioSrc.isPlaying)
+                {
+                    EnemySound.PlayEnemyWalkingGrass();
+                }
             }
         }
 
@@ -153,6 +160,11 @@ public class EnemyWalk : MonoBehaviour
         float _speed = (Vector3.Magnitude(curpos - lastpos) / Time.deltaTime);//与上一个点做计算除去当前帧花的时间。
         lastpos = curpos;//把当前点保存下一次用
         return _speed;
+    }
+
+    public void DestroyAfterAnimation()
+    {
+        Destroy(this.gameObject);
     }
 
 

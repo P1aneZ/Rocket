@@ -408,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadEvent: {fileID: 11400000, guid: 9e3bff83613f88d4dad0e7b0b44927e8, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: b2340f8deb29d5444829c1cc3f2395d9, type: 2}
+  beginPlayGame: {fileID: 11400000, guid: 6c2728bc2fec3b54e887b414867781c7, type: 2}
   rb: {fileID: 4715578748491275973}
   pushForce: 0.015
   direction: {x: 0, y: 0, z: 0}
