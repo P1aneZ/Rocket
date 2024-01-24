@@ -25,19 +25,13 @@ public class RocketSound : MonoBehaviour
         rocketExplosion2 = Resources.Load<AudioClip>("Rocket_Explosion2");
         rocketExplosion3 = Resources.Load<AudioClip>("Rocket_Explosion3");
         rocketHit = Resources.Load<AudioClip>("Rocket_Hit");
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public static void PlayRocketMoving()
     {
         audioSrc.PlayOneShot(rocketMoving);
     }
-
-
 
     public static void PlayRocketExplosion()
     {
