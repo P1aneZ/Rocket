@@ -26,6 +26,9 @@ public class Character : MonoBehaviour
     //执行完一遍死亡动画就不执行了
     private bool isBoom = false;
 
+    //血条变化的事件
+    public UnityEvent<Character> OnHealthChange;
+
     //受伤和死亡事件
     public UnityEvent<Transform> OnTakeDamage;
     public UnityEvent OnDie;
@@ -34,6 +37,7 @@ public class Character : MonoBehaviour
     {
         //每次开始的时候，当前血量等于最大血量
         currentHealth = maxHealth;
+        OnHealthChange?.Invoke(this);//传递血量
     }
 
     private void Update()
@@ -75,6 +79,8 @@ public class Character : MonoBehaviour
             isDead = true;//触发死亡
             OnDie?.Invoke();
         }
+
+        OnHealthChange?.Invoke(this);//传递血量
 
         if(this.tag == "Rocket" && isHurtParticlesEffect != null && deadParticlesEffect != null)
         {
