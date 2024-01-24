@@ -14,6 +14,7 @@ public class RocketMove : MonoBehaviour
     public VoidEventSO beginPlayGame;
 
     public Rigidbody2D rb;
+    public AudioSource audioSource;
     //获取特效代码
     private RocketFireParticles rocketFireParticles;
 
@@ -105,7 +106,10 @@ public class RocketMove : MonoBehaviour
             //给予Rocket一个向着鼠标方向的力
             rb.AddForce(transform.up * pushForce, ForceMode2D.Impulse);
         }
-        
+        else
+        {
+            audioSource.Stop();
+        }
 
     }
 
