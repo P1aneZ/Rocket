@@ -51,8 +51,8 @@ public class Character : MonoBehaviour
             invulnerable = false;
         }
 
-        if(GameObject.Find("摧毁装置"))
-            GameObject.Find("摧毁装置").GetComponent<Character>().isDead = GameObject.Find("Rocket_0").GetComponent<RocketLand>().isDestroyed;//只要火箭判定和摧毁装置碰撞，直接判定死亡
+        if(GameObject.FindWithTag("DestroyDevice"))
+            GameObject.FindWithTag("DestroyDevice").GetComponent<Character>().isDead = GameObject.Find("Rocket_0").GetComponent<RocketLand>().isDestroyed;//只要火箭判定和摧毁装置碰撞，直接判定死亡
             /*此处是指定了摧毁装置里的character脚本里的isDead被修改*/
     }
 
