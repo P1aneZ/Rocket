@@ -20,6 +20,6 @@ public class IICameraController : MonoBehaviour
 
     private void GameStart()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

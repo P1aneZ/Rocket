@@ -20,20 +20,36 @@ public class SceneLoader : MonoBehaviour
     [Header("事件监听")]
     //监听场景加载事件，注册对应函数
     public SceneLoadEventSO loadEventSO;
+
     //监听点击“开始游戏”事件
     public VoidEventSO gameStartEvent;
+    //监听点击“设置”事件
+    public VoidEventSO toSettingEvent;
+    //监听点击“退出游戏”事件
+    public VoidEventSO gameEndEvent;
+    //监听点击“返回主菜单”事件
+    public VoidEventSO backToMenuEvent;
+    //监听点击“关卡一”事件
+    public VoidEventSO LevelOne;
 
     [Header("事件广播")]
     //广播淡入淡出的事件
     public FadeEventSO fadeEvent;
     //广播场景加载完的事件
     public VoidEventSO afterSceneLoadedEvent;
+    //广播开始游戏
+    public VoidEventSO beginPlayGame;
 
     [Header("场景")]
-    //第一个加载的场景
-    public GameSceneSO firstLoadScene;
     //菜单场景
     public GameSceneSO menuScene;
+    //关卡选择界面
+    public GameSceneSO levelSelectScene;
+    //设置界面
+    public GameSceneSO settingScene;
+    //第一关场景
+    public GameSceneSO levelOneScene;
+
     //当前的场景
     private GameSceneSO currentLoadedScene;
 
@@ -51,32 +67,38 @@ public class SceneLoader : MonoBehaviour
     private void Awake()
     {
         //当前的场景就是第一个加载的场景
-        //currentLoadedScene = firstLoadScene;
+        currentLoadedScene = menuScene;
         //采用叠加模式，异步加载第一个场景
-        //currentLoadedScene.sceneReference.LoadSceneAsync (LoadSceneMode.Additive) ;
+        currentLoadedScene.sceneReference.LoadSceneAsync (LoadSceneMode.Additive);
     }
 
     private void Start()
     {
-        loadEventSO.RaiseLoadRequestEvent(menuScene, firstPosition, true); 
+        //loadEventSO.RaiseLoadRequestEvent(menuScene, menuPosition, true); 
     }
 
     private void OnEnable()
     {
         loadEventSO.LoadRequestEvent += OnLoadRequestEvent;
+
+        //按钮
         gameStartEvent.OnEventRaised += GameStart;
+        backToMenuEvent.OnEventRaised += BackToMenu;
+        LevelOne.OnEventRaised += ToLevelOne;
+        toSettingEvent.OnEventRaised += ToSetting;
+        gameEndEvent.OnEventRaised += ExitGame;
     }
 
     private void OnDisable()
     {
         loadEventSO.LoadRequestEvent -= OnLoadRequestEvent;
+        
+        //按钮
         gameStartEvent.OnEventRaised -= GameStart;
-    }
-
-    private void GameStart()
-    {
-        sceneToLoad = firstLoadScene;
-        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
+        backToMenuEvent.OnEventRaised -= BackToMenu;
+        LevelOne.OnEventRaised -= ToLevelOne;
+        toSettingEvent.OnEventRaised += ToSetting;
+        gameEndEvent.OnEventRaised += ExitGame;
     }
 
     //当监听到场景加载请求的时候，执行该函数
@@ -108,7 +130,7 @@ public class SceneLoader : MonoBehaviour
         }
 
         //等淡入淡出完成后再执行下一步
-        yield return new WaitForSeconds(fadeDuration); ;
+        yield return new WaitForSeconds(fadeDuration); 
         
         //卸载当前场景
         yield return currentLoadedScene.sceneReference.UnLoadScene(); 
@@ -155,4 +177,36 @@ public class SceneLoader : MonoBehaviour
             afterSceneLoadedEvent.RaiseEvent();
         }
     }
+
+    private void GameStart()
+    {
+        sceneToLoad = levelSelectScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
+    }
+
+    private void BackToMenu()
+    {
+        sceneToLoad = menuScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
+    }
+
+    private void ToLevelOne()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
+        beginPlayGame.RaiseEvent();
+    }
+
+    private void ToSetting()
+    {
+        sceneToLoad = settingScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
+    }
+
+    private void ExitGame()
+    {
+        Debug.Log("Quit!");
+        Application.Quit();
+    }
+
 }
