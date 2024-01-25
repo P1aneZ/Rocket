@@ -15,9 +15,12 @@ public class TimeCounter : MonoBehaviour
 
     public bool isCounting;
     private bool isLanded=false;
+
+    GameObject timecounter;
     // Start is called before the first frame update
     void Start()
     {
+        timecounter = GameObject.FindWithTag("TimeCounter");
         rocket = GameObject.FindWithTag("Rocket");
         isCounting = rocket.GetComponent<PhysicsCheck>().isWithLand;
         
@@ -43,12 +46,13 @@ public class TimeCounter : MonoBehaviour
         }
         if (isCounting && !isLanded)//在计时且尚未判定着陆时
         {
-            //gameObject.GetComponent<CanvasGroup>().alpha = 1.0f;
+            timecounter.SetActive(true);
             timeLeft -= Time.deltaTime;
         }
         else
         {
             //gameObject.GetComponent<CanvasGroup>().alpha = 0f;
+            timecounter.SetActive(false);
             timeLeft = rocket.GetComponent<RocketLand>().landDuration;
         }
 
