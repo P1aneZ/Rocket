@@ -12,7 +12,7 @@ public class EnemyWalk : MonoBehaviour
     public Transform[] movePos;
     public float velocity;
 
-    private int i = 0;
+    public int i = 0;
     private bool movingRight = true;
     private float wait;
 
