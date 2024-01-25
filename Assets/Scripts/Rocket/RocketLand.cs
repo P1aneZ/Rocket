@@ -10,7 +10,7 @@ public class RocketLand : MonoBehaviour
     [Header("所需时长")]
     public float landDuration = 3.0f;
     public float supplyDuration = 3.0f;
-    private float landTime,supplyTime;
+    public float landTime,supplyTime;
 
     [Header("判断是否成功")]
     public bool isLand=false;//成功着陆

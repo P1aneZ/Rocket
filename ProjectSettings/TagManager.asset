@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Gem
   - DestroyDevice
+  - TimeCounter
   layers:
   - Default
   - TransparentFX
