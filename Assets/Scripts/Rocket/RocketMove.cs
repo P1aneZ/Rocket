@@ -35,13 +35,14 @@ public class RocketMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //获取特效代码
         rocketFireParticles = GetComponent<RocketFireParticles>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //if (!isHurt)
-        if (!isDead && !isLoad)// && isPlay)
+        if (!isDead && !isLoad && isPlay)
         {
             FollowMouseRotate();
             FollowMouseMove();
