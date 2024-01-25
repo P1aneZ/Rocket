@@ -24,7 +24,7 @@ public class Attack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)// 这里不喷火也能造成伤害--Berluga
     {
         if (isAttack)
-            other.GetComponent<Character>()?.TakeDamage(this);
+            other.GetComponent<Character>()?.TakeDamage(damage);
     }
 
 }

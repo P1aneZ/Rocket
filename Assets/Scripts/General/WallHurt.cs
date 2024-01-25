@@ -5,6 +5,8 @@ using UnityEngine;
 public class WallHurt : MonoBehaviour
 {
     private Attack attack;
+
+    public int damage;
     
     void Start()
     {
@@ -22,6 +24,6 @@ public class WallHurt : MonoBehaviour
     {
         
         if (other.gameObject.tag=="Rocket")
-        other.gameObject.GetComponent<Character>()?.TakeDamage(attack);
+        other.gameObject.GetComponent<Character>()?.TakeDamage(damage);
     }
 }
