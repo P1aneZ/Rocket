@@ -16,7 +16,6 @@ public class EnemyAttackMale : MonoBehaviour
     {
         if (other.tag == "Rocket")//检测是否是Rocket进入视野
         {
-
             Shotting();//执行射击
         }
     }

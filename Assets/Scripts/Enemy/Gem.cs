@@ -13,7 +13,9 @@ public class Gem : MonoBehaviour
     private float maxLifeTime = 2.0f;
     private float lifeTime;
 
-    private Attack attack;
+    
+
+    public int damage;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class Gem : MonoBehaviour
         target.z = 0;// // 因为是2D，用不到z轴。使将z轴的值为0，这样目标的坐标就在(x,y)平面上了
         path = target - pos; //获取弹道向量
         path.z = 0;
-        attack = GetComponent<Attack>();
+        
 
         //子弹角度
         float fireAngle = Vector2.Angle( path, Vector2.up);
@@ -52,7 +54,7 @@ public class Gem : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<Character>()?.TakeDamage(attack);//
+        collision.GetComponent<Character>()?.TakeDamage(damage);//
         Destroy(gameObject);        
     }
 }

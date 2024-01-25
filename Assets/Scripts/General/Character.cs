@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
     public UnityEvent<Character> OnHealthChange;
 
     //受伤和死亡事件
-    public UnityEvent<Transform> OnTakeDamage;
+    public UnityEvent OnTakeDamage;
     public UnityEvent OnDie;
 
     private void Start()
@@ -56,22 +56,22 @@ public class Character : MonoBehaviour
             /*此处是指定了摧毁装置里的character脚本里的isDead被修改*/
     }
 
-    public void TakeDamage(Attack attacker)
+    public void TakeDamage(int damage)
     {
         //如果处于无敌状态，就不受到伤害
         if (invulnerable)
             return;
 
         //如果扣血扣不死
-        if(currentHealth - attacker.damage > 0)
+        if(currentHealth - damage > 0)
         {
             if (isDead) currentHealth = 0;
             //扣血
-            currentHealth -= attacker.damage;
+            currentHealth -= damage;
             //触发无敌
             TriggerInvulnerable();
             //执行受伤
-            OnTakeDamage?.Invoke(attacker.transform);
+            OnTakeDamage?.Invoke();
         }
         else
         {
