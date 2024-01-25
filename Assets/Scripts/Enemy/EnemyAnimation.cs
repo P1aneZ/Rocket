@@ -38,10 +38,7 @@ public class EnemyAnimation : MonoBehaviour
         anim.SetBool("isAttack",enemyAttack.isAttack);
     }
 
-    public void EnemyHurt()
-    {
-        anim.SetTrigger("Hurt");
-    }
+    
 
     
 }

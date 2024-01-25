@@ -36,11 +36,13 @@ public class EnemyAnimationMale : MonoBehaviour
         anim.SetFloat("velocityX", Mathf.Abs(enemyWalk.velocity));
         anim.SetBool("isDead", character.isDead);
         anim.SetBool("isAttack", enemyAttack.isAttack);
+
+        anim.SetBool("isHurt", character.isHurt);
     }
 
     public void EnemyHurt()
     {
-        anim.SetTrigger("Hurt");
+        anim.SetBool("isHurt", character.isHurt);
     }
 
   

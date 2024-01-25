@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public bool isDead=false;
+    public bool isHurt = false;
 
     //受伤无敌持续时间，计时器，是否无敌的状态
     [Header("受伤无敌")]
@@ -49,6 +50,7 @@ public class Character : MonoBehaviour
         if(invulnerableCounter <= 0)
         {
             invulnerable = false;
+            isHurt = false;
         }
 
         if(GameObject.FindWithTag("DestroyDevice"))
@@ -72,6 +74,7 @@ public class Character : MonoBehaviour
             TriggerInvulnerable();
             //执行受伤
             OnTakeDamage?.Invoke(attacker.transform);
+            isHurt = true;
         }
         else
         {
@@ -106,5 +109,6 @@ public class Character : MonoBehaviour
         //触发无敌状态，开始无敌时间倒计时
         invulnerable = true;
         invulnerableCounter = invulnerableDuration;
+
     }
 }
