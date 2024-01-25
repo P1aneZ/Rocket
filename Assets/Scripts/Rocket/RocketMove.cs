@@ -42,7 +42,7 @@ public class RocketMove : MonoBehaviour
     void Update()
     {
         //if (!isHurt)
-        if (!isDead && !isLoad)// && isPlay)
+        if (!isDead && !isLoad && isPlay)
         {
             FollowMouseRotate();
             FollowMouseMove();
