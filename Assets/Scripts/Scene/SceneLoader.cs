@@ -229,18 +229,21 @@ public class SceneLoader : MonoBehaviour
 
     private void GameStart()
     {
+        SceneManager.LoadScene(5);
         sceneToLoad = levelSelectScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
     }
 
     private void BackToMenu()
     {
+        SceneManager.LoadScene(0);
         sceneToLoad = menuScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
     }
 
     private void ToLevelOne()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
         beginPlayGame.RaiseEvent();
@@ -250,6 +253,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToSetting()
     {
+        SceneManager.LoadScene(6);
         sceneToLoad = settingScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
     }
@@ -263,6 +267,7 @@ public class SceneLoader : MonoBehaviour
     public void GamePass()
     {
         //停掉控制，加载通关场景
+        SceneManager.LoadScene(2);
         sceneToLoad = passScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
 
@@ -346,6 +351,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelTwo()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, secondPosition, true);
 
@@ -355,6 +361,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelThree()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, thirdPosition, true);
  
@@ -363,6 +370,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelFour()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, fouthPosition, true);
 
@@ -372,6 +380,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelFive()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, fifthPosition, true);
 
@@ -381,6 +390,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelSix()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, sixthPosition, true);
 
@@ -390,6 +400,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelSeven()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, seventhPosition, true);
 
@@ -399,6 +410,8 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelEight()
     {
+        SceneManager.LoadScene(3);
+
         sceneToLoad = levelEightScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, eigthPosition, true);
 
@@ -408,6 +421,7 @@ public class SceneLoader : MonoBehaviour
 
     private void ToLevelNine()
     {
+        SceneManager.LoadScene(3);
         sceneToLoad = levelEightScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, ninthPosition, true);
 

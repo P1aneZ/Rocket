@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Persistent.unity
-    guid: b4f369a720e76ad4d92d00b05d9b1266
+    path: Assets/Scenes/Menu.unity
+    guid: ca9f32691da844c4ba240b47091f2cdd
   - enabled: 1
     path: Assets/Scenes/level/level1.unity
     guid: 8cbe8ee2cbb54724d8020fc63923cf20
@@ -15,10 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/level/PassScene.unity
     guid: 514830dfad6fd4e498d376a16109d287
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: ca9f32691da844c4ba240b47091f2cdd
+    path: Assets/Scenes/Persistent.unity
+    guid: b4f369a720e76ad4d92d00b05d9b1266
   - enabled: 1
     path: Assets/Scenes/level/level2.unity
     guid: 6b18ef7abf5b43246aabe567241dfdfc
+  - enabled: 1
+    path: Assets/Scenes/levelSelect.unity
+    guid: 59e0d69935b3a7346ba832d9543f8e3d
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: af1b42cfa3ca43f48a141d852c67a295
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 1781b785c7eef4846af301cbf79b8d77, type: 2}
