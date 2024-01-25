@@ -16,10 +16,13 @@ public class SceneLoader : MonoBehaviour
     public Vector3 firstPosition;
     //菜单页面，火箭应该在哪捏
     public Vector3 menuPosition;
+    //关卡是否通关
+    public RocketLand rocketLand;
 
     [Header("事件监听")]
     //监听场景加载事件，注册对应函数
     public SceneLoadEventSO loadEventSO;
+    //监听“关卡通过事件”
 
     //监听点击“开始游戏”事件
     public VoidEventSO gameStartEvent;
