@@ -17,7 +17,6 @@ public class RocketStatBar : MonoBehaviour
         }
     }
 
-
     public void OnHealthChange(float persentage)
     {
         healthImage.fillAmount = persentage;
