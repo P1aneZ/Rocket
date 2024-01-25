@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RocketLand : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class RocketLand : MonoBehaviour
     public bool isSupplied=false;//成功补给
     public bool isDestroyed;//成功摧毁
 
+    //成功着陆
+    public UnityEvent Pass;
 
     private void Awake()
     {
@@ -30,7 +33,8 @@ public class RocketLand : MonoBehaviour
     {
         if (landTime > 0)landTime -= Time.deltaTime;
         if (supplyTime > 0)supplyTime -= Time.deltaTime;
-        IfLand();
+        if(!isLand)
+            IfLand();
         IfDestroy();
         IfSupply();
     }
@@ -43,7 +47,8 @@ public class RocketLand : MonoBehaviour
             if (landTime <= 0&&physicsCheck.isWithLand)//计时时间到且火箭依然在着陆装置范围内
             {
                 isLand = true;//判定成功着陆
-                landTime = 0;
+                Pass?.Invoke();
+                landTime = landDuration;
             }
             
             /*transform.position = new Vector3(-5f, 0, 0); 

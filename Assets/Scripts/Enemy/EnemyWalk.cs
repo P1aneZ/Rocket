@@ -66,7 +66,8 @@ public class EnemyWalk : MonoBehaviour
     }
     void Follow()
     {
-        target = GameObject.Find("Rocket_0").GetComponent<Transform>().position;//获取目标的位置
+        if(GameObject.Find("Rocket_0"))
+            target = GameObject.Find("Rocket_0").GetComponent<Transform>().position;//获取目标的位置
         Vector2 position = transform.position;
         if (Mathf.Abs(gameObject.transform.position.x - target.x) > 5)//敌人和角色距离大于某个值时才开始朝玩家移动,这样避免了敌人与玩家冲重合
         {

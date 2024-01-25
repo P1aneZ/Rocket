@@ -1,23 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using System;
 using Unity.VisualScripting;
+using UnityEngine.tvOS;
 
 public class SceneLoader : MonoBehaviour
 {
     //玩家的坐标
     public Transform playerTrans;
-    //第一个去的位置
-    public Vector3 firstPosition;
-    //菜单页面，火箭应该在哪捏
-    public Vector3 menuPosition;
+
     //关卡是否通关
     public RocketLand rocketLand;
+    //当前所在的关卡数
+    public int levelNum = 0;
+
+    //出生点
+    public Vector3 birthPosition;
+    //菜单页面，火箭应该在哪捏
+    public Vector3 menuPosition;
+    //第一个去的位置
+    public Vector3 firstPosition;
+    //第二个去的位置
+    public Vector3 secondPosition;
+    //第三个去的位置
+    public Vector3 thirdPosition;
+    //第四个去的位置
+    public Vector3 fouthPosition;
+    //第五个去的位置
+    public Vector3 fifthPosition;
+    //第六个去的位置
+    public Vector3 sixthPosition;
+    //第七个去的位置
+    public Vector3 seventhPosition;
+    //第八个去的位置
+    public Vector3 eigthPosition;
+    //第九个去的位置
+    public Vector3 ninthPosition;
 
     [Header("事件监听")]
     //监听场景加载事件，注册对应函数
@@ -35,6 +59,11 @@ public class SceneLoader : MonoBehaviour
     //监听点击“关卡一”事件
     public VoidEventSO LevelOne;
 
+    //监听点击“下一关卡”事件
+    public VoidEventSO nextLevel;
+    //监听点击“重新开始”事件
+    public VoidEventSO remake;
+
     [Header("事件广播")]
     //广播淡入淡出的事件
     public FadeEventSO fadeEvent;
@@ -50,11 +79,19 @@ public class SceneLoader : MonoBehaviour
     public GameSceneSO levelSelectScene;
     //设置界面
     public GameSceneSO settingScene;
+    //通关界面
+    public GameSceneSO passScene;
+
     //第一关场景
     public GameSceneSO levelOneScene;
+    //第二关
+    public GameSceneSO levelTwoScene;
+
+    //第八九关场景
+    public GameSceneSO levelEightScene;
 
     //当前的场景
-    private GameSceneSO currentLoadedScene;
+    public GameSceneSO currentLoadedScene;
 
     //创建临时变量保存事件监听时传进来的值
     private GameSceneSO sceneToLoad;
@@ -90,6 +127,9 @@ public class SceneLoader : MonoBehaviour
         LevelOne.OnEventRaised += ToLevelOne;
         toSettingEvent.OnEventRaised += ToSetting;
         gameEndEvent.OnEventRaised += ExitGame;
+
+        nextLevel.OnEventRaised += ToNextLevel;
+        remake.OnEventRaised += Remake;
     }
 
     private void OnDisable()
@@ -102,6 +142,9 @@ public class SceneLoader : MonoBehaviour
         LevelOne.OnEventRaised -= ToLevelOne;
         toSettingEvent.OnEventRaised += ToSetting;
         gameEndEvent.OnEventRaised += ExitGame;
+
+        nextLevel.OnEventRaised -= ToNextLevel;
+        remake.OnEventRaised -= Remake;
     }
 
     //当监听到场景加载请求的时候，执行该函数
@@ -118,6 +161,10 @@ public class SceneLoader : MonoBehaviour
         sceneToLoad = locationToLoad;
         positionToGo = posToGo;
         this.fadeScreen = fadeScreen;
+
+        //更改出生点
+        birthPosition = posToGo;
+
 
         //如果当前有场景，调用携程
         if (currentLoadedScene != null)
@@ -198,6 +245,8 @@ public class SceneLoader : MonoBehaviour
         sceneToLoad = levelOneScene;
         loadEventSO.RaiseLoadRequestEvent(sceneToLoad, firstPosition, true);
         beginPlayGame.RaiseEvent();
+
+        levelNum = 1;
     }
 
     private void ToSetting()
@@ -210,6 +259,161 @@ public class SceneLoader : MonoBehaviour
     {
         Debug.Log("Quit!");
         Application.Quit();
+    }
+
+    public void GamePass()
+    {
+        //停掉控制，加载通关场景
+        sceneToLoad = passScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, menuPosition, true);
+
+        //重置所有通关判定
+        rocketLand.isLand = false;
+        rocketLand.landTime = 0;
+    }
+
+    private void Remake()
+    {
+        switch (levelNum)
+        {
+            case 1:
+                ToLevelOne();
+                break;
+            case 2:
+                ToLevelTwo();
+                break;
+            case 3:
+                ToLevelThree();
+                break;
+            case 4:
+                ToLevelFour();
+                break;
+            case 5:
+                ToLevelFive();
+                break;
+            case 6:
+                ToLevelSix();
+                break;
+            case 7:
+                ToLevelSeven();
+                break;
+            case 8:
+                ToLevelEight();
+                break;
+            case 9:
+                ToLevelNine();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ToNextLevel()
+    {
+        Debug.Log("去下一关");
+        switch (levelNum)
+        {
+            case 1:
+                ToLevelTwo();
+                break;
+            case 2:
+                ToLevelThree();
+                break;
+            case 3:
+                ToLevelFour();
+                break;
+            case 4:
+                ToLevelFive();
+                break;
+            case 5:
+                ToLevelSix();
+                break;
+            case 6:
+                ToLevelSeven();
+                break;
+            case 7:
+                ToLevelEight();
+                break;
+            case 8:
+                ToLevelNine();
+                break;
+            case 9:
+                ToLevelOne();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ToLevelTwo()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, secondPosition, true);
+
+        //当前是第一关
+        levelNum = 2;
+    }
+
+    private void ToLevelThree()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, thirdPosition, true);
+ 
+        levelNum = 3;
+    }
+
+    private void ToLevelFour()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, fouthPosition, true);
+
+        //当前是第一关
+        levelNum = 4;
+    }
+
+    private void ToLevelFive()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, fifthPosition, true);
+
+        //当前是第一关
+        levelNum = 5;
+    }
+
+    private void ToLevelSix()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, sixthPosition, true);
+
+        //当前是第一关
+        levelNum = 6;
+    }
+
+    private void ToLevelSeven()
+    {
+        sceneToLoad = levelOneScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, seventhPosition, true);
+
+        //当前是第一关
+        levelNum = 7;
+    }
+
+    private void ToLevelEight()
+    {
+        sceneToLoad = levelEightScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, eigthPosition, true);
+
+        //当前是第一关
+        levelNum = 8;
+    }
+
+    private void ToLevelNine()
+    {
+        sceneToLoad = levelEightScene;
+        loadEventSO.RaiseLoadRequestEvent(sceneToLoad, ninthPosition, true);
+
+        //当前是第一关
+        levelNum = 9;
     }
 
 }
