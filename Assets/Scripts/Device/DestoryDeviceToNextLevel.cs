@@ -17,6 +17,8 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
         if (other.gameObject.tag == "Rocket")
         {
             Debug.Log("同归于尽");
+            this.gameObject.GetComponent<Character>().isDead = true;
+            this.gameObject.GetComponent<Character>().OnDie?.Invoke();
             isDestroyed = true;
             //过关事件
         }
