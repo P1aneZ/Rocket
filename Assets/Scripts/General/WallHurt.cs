@@ -7,10 +7,8 @@ public class WallHurt : MonoBehaviour
     public int damage;        
 
     private void OnCollisionExit2D(Collision2D other)
-
-    {
-        
-        if (other.gameObject.tag=="Rocket")// && other.GetType().ToString()=="Polygon Collider 2D")
+    {       
+        if (other.gameObject.tag=="Rocket" )
         other.gameObject.GetComponent<Character>()?.TakeDamage(damage);
     }
 }
