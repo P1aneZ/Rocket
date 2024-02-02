@@ -16,22 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d6d9040a443b6b847985cc3de977b4f5
-  m_SerializeEntries:
-  - m_GUID: 59e0d69935b3a7346ba832d9543f8e3d
-    m_Address: Assets/Scenes/levelSelect.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: af1b42cfa3ca43f48a141d852c67a295
-    m_Address: Assets/Scenes/Setting.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 514830dfad6fd4e498d376a16109d287
-    m_Address: Assets/Scenes/level/PassScene.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0075612a823c5224c88d3af884dc3fd5, type: 2}
   m_SchemaSet:
