@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6206658315134121843}
   - component: {fileID: 5365313827023553263}
   - component: {fileID: 363178140376275941}
+  - component: {fileID: 3591630709891372154}
   - component: {fileID: 4376026528310783235}
   - component: {fileID: 679868843256905202}
   m_Layer: 8
@@ -237,6 +238,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3591630709891372154}
+        m_TargetAssemblyTypeName: DestoryDeviceAnimation, Assembly-CSharp
+        m_MethodName: DeviceHurt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDie:
     m_PersistentCalls:
       m_Calls:
@@ -372,6 +385,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71337152dd5ce74795cbb311bf67ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3591630709891372154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3380328950297484545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c05047bd95330e4d88255374c63612c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &4376026528310783235
 MonoBehaviour:
   m_ObjectHideFlags: 0
