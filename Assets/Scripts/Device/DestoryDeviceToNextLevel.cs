@@ -14,7 +14,7 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
     {
         isDestroyed = true;//成功摧毁
         //过关事件
-        Pass?.Invoke();
+        StartCoroutine(PassCounter());
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -26,7 +26,15 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
             this.gameObject.GetComponent<Character>().OnDie?.Invoke();
             isDestroyed = true;
             //过关事件
-            Pass?.Invoke();
+            StartCoroutine(PassCounter());
         }
     }
+
+    private IEnumerator PassCounter()
+    {
+        yield return new WaitForSeconds(3f);
+        Pass?.Invoke();
+    }
+
+
 }
