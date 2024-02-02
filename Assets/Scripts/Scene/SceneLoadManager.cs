@@ -93,6 +93,11 @@ public class SceneLoadManager : MonoBehaviour
         SceneManager.LoadScene("PassScene");
     }
 
+    public void ToFailScene()
+    {
+        SceneManager.LoadScene("FailScene");
+    }
+
     public void ToNextLevel()
     {
         Debug.Log("去下一关");
