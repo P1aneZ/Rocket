@@ -383,8 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049c5b6884d83c5448ad40d74305b74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 0}
   isDestroyed: 0
+  damage: 5
 --- !u!1 &5631501626072318901
 GameObject:
   m_ObjectHideFlags: 0
