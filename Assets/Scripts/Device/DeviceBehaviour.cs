@@ -17,13 +17,7 @@ public class DeviceBehaviour : MonoBehaviour
         rocket = GameObject.Find("Rocket_0");
         launchDevice = GameObject.Find("Æð·É×°ÖÃ");
         TakeOff();//Æð·É
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    }    
 
     private void TakeOff()
     {

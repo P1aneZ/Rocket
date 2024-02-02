@@ -27,8 +27,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9bddc8e4c0ad7904585259f6b680be4b
-    m_Address: Assets/Scenes/level/level8.unity
+  - m_GUID: 514830dfad6fd4e498d376a16109d287
+    m_Address: Assets/Scenes/level/PassScene.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
