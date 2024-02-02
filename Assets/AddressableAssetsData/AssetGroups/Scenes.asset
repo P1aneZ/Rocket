@@ -17,16 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: d6d9040a443b6b847985cc3de977b4f5
   m_SerializeEntries:
-  - m_GUID: b4f369a720e76ad4d92d00b05d9b1266
-    m_Address: Persistent
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ca9f32691da844c4ba240b47091f2cdd
-    m_Address: Assets/Scenes/Menu.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 59e0d69935b3a7346ba832d9543f8e3d
     m_Address: Assets/Scenes/levelSelect.unity
     m_ReadOnly: 0

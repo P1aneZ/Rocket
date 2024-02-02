@@ -2157,17 +2157,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1178590693 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3508781431022372806, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
-  m_PrefabInstance: {fileID: 1921247333}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178590677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e66e1c83622db4892ca1e0725c2412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1350352860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4820698136192277524, guid: 26e1dcdec57e6e643ab2c6570c7ffe8e, type: 3}
@@ -2947,7 +2936,7 @@ PrefabInstance:
     - target: {fileID: 2546386307723267319, guid: 926dca899e040834abd72673361f9ec6, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1178590693}
+      objectReference: {fileID: 0}
     - target: {fileID: 8011773560030089821, guid: 926dca899e040834abd72673361f9ec6, type: 3}
       propertyPath: m_Name
       value: "\u6467\u6BC1\u88C5\u7F6E (\u5DEE\u5206)"
@@ -3163,10 +3152,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u7740\u9646\u88C5\u7F6E"
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3292,7 +3277,7 @@ PrefabInstance:
     - target: {fileID: 6206658315134121843, guid: 26e1dcdec57e6e643ab2c6570c7ffe8e, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1178590693}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
