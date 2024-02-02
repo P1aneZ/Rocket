@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoadManager : MonoBehaviour
 {
-    public void ToLevelSelect()
+    public void ToLevelSelectPage1()
     {
-        SceneManager.LoadScene("levelSelect");
+        SceneManager.LoadScene("levelSelectPage1");
     }
 
     public void ToSetting()
@@ -38,5 +38,20 @@ public class SceneLoadManager : MonoBehaviour
     public void ToLevel3()
     {
         SceneManager.LoadScene("Level3");
+    }
+
+    public void ToLevel4()
+    {
+        SceneManager.LoadScene("Level4");
+    }
+
+    public void ToLevel5()
+    {
+        SceneManager.LoadScene("Level5");
+    }
+
+    public void ToLevel6()
+    {
+        SceneManager.LoadScene("Level6");
     }
 }
