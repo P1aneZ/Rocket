@@ -4840,11 +4840,11 @@ GameObject:
   - component: {fileID: 7641373262282771545}
   - component: {fileID: 5691997782679590446}
   - component: {fileID: 6643679611023880755}
-  - component: {fileID: 3358367435609734776}
   - component: {fileID: 7821965714049390359}
   - component: {fileID: 2546386307723267319}
   - component: {fileID: 137764392809958073}
   - component: {fileID: 6324529603154650129}
+  - component: {fileID: 2034931730928840997}
   m_Layer: 8
   m_Name: "\u6467\u6BC1\u88C5\u7F6E (\u5DEE\u5206)"
   m_TagString: DestroyDevice
@@ -4992,18 +4992,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3358367435609734776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8011773560030089821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe3c21713dbbba44acfc2f47487fc3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &7821965714049390359
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5211,3 +5199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71337152dd5ce74795cbb311bf67ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2034931730928840997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011773560030089821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b6c524d68f6eb449831266a6b5196a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDestroyed: 0

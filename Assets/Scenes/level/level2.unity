@@ -246,6 +246,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c402bf5dce97dda4c9859e9fc677d39e, type: 3}
+--- !u!114 &345003912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2034931730928840997, guid: 926dca899e040834abd72673361f9ec6, type: 3}
+  m_PrefabInstance: {fileID: 1766335243}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b6c524d68f6eb449831266a6b5196a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &409858773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1012,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2546386307723267319, guid: 926dca899e040834abd72673361f9ec6, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 345003912}
+    - target: {fileID: 2546386307723267319, guid: 926dca899e040834abd72673361f9ec6, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DestoryDeviceToNextLevel, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8011773560030089821, guid: 926dca899e040834abd72673361f9ec6, type: 3}
       propertyPath: m_Name
       value: "\u6467\u6BC1\u88C5\u7F6E (To next Level)"
