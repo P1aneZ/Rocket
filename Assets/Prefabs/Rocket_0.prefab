@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 8443388726420831736}
   - component: {fileID: 84351349431056312}
   - component: {fileID: 7610387499330736621}
-  - component: {fileID: 3508781431022372806}
   - component: {fileID: 230736159830598946}
   - component: {fileID: 2780441732538946405}
   - component: {fileID: 2657176953664828055}
@@ -408,25 +407,6 @@ MonoBehaviour:
   isHurt: 0
   hurtForce: 1
   isDead: 0
---- !u!114 &3508781431022372806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746811516450506101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e66e1c83622db4892ca1e0725c2412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landDuration: 3
-  supplyDuration: 3
-  landTime: 0
-  supplyTime: 0
-  isLand: 0
-  isSupplied: 0
-  isDestroyed: 0
 --- !u!114 &230736159830598946
 MonoBehaviour:
   m_ObjectHideFlags: 0

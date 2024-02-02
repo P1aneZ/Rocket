@@ -5,31 +5,20 @@ using UnityEngine;
 public class DestoryDeviceToNextLevel : MonoBehaviour
 {
     public bool isDestroyed;//是否摧毁
-
-    private GameObject rocket;
-    private PhysicsCheck physicsCheck; 
-
-    private void Start()
-    {
-        rocket = GameObject.Find("Rocket_0");
-        physicsCheck = rocket.GetComponent<PhysicsCheck>();
-    }
-
-    private void Update()
-    {
-        IfDestroy();
-    }
-    public void IfDestroy()
-    {
-        if (physicsCheck.isWithDestroyDevice)
-        {
-            isDestroyed = true;//判定为已经摧毁
-            //触发过关事件
-        }
-    }
+         
     public void CheckDestoryDeviceDead()
     {
         isDestroyed = true;//成功摧毁
         //过关事件
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Rocket")
+        {
+            Debug.Log("同归于尽");
+            isDestroyed = true;
+            //过关事件
+        }
     }
 }
