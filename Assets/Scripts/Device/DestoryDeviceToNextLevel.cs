@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DestoryDeviceToNextLevel : MonoBehaviour
 {
+    //成功通关事件
+    public UnityEvent Pass;
+
     public bool isDestroyed;//是否摧毁
          
     public void CheckDestoryDeviceDead()
     {
         isDestroyed = true;//成功摧毁
         //过关事件
+        Pass?.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -21,6 +26,7 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
             this.gameObject.GetComponent<Character>().OnDie?.Invoke();
             isDestroyed = true;
             //过关事件
+            Pass?.Invoke();
         }
     }
 }

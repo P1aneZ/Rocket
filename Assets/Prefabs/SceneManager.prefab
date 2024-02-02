@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff8248df50641e4ebe7e758ba6e930b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: {fileID: 11400000, guid: afe60b913c735f3409e4eca268da5599, type: 2}
+  remake: {fileID: 11400000, guid: e34c7b6d8836f2f499fb5d6e175e55d2, type: 2}
