@@ -23,7 +23,7 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
         {
             Debug.Log("同归于尽");
             this.gameObject.GetComponent<Character>().isDead = true;
-            this.gameObject.GetComponent<Character>().OnDie?.Invoke();
+            //this.gameObject.GetComponent<Character>().OnDie?.Invoke();
             isDestroyed = true;
             //过关事件
             StartCoroutine(PassCounter());
@@ -32,6 +32,7 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
 
     private IEnumerator PassCounter()
     {
+        Debug.Log("协程中");
         yield return new WaitForSeconds(3f);
         Pass?.Invoke();
     }
