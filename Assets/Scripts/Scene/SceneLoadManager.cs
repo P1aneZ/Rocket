@@ -37,6 +37,11 @@ public class SceneLoadManager : MonoBehaviour
         SceneManager.LoadScene("levelSelectPage1");
     }
 
+    public void ToLevelSelectPage2()
+    {
+        SceneManager.LoadScene("levelSelectPage2");
+    }
+
     public void ToSetting()
     {
         SceneManager.LoadScene("Setting");
@@ -88,6 +93,24 @@ public class SceneLoadManager : MonoBehaviour
         SceneManager.LoadScene("Level6");
     }
 
+    public void ToLevel7()
+    {
+        levelNum = 7;
+        SceneManager.LoadScene("Level7");
+    }
+
+    public void ToLevel8()
+    {
+        levelNum = 8;
+        SceneManager.LoadScene("Level8");
+    }
+
+    public void ToLevel9()
+    {
+        levelNum = 9;
+        SceneManager.LoadScene("Level9");
+    }
+
     public void ToPassScene()
     {
         SceneManager.LoadScene("PassScene");
@@ -118,6 +141,15 @@ public class SceneLoadManager : MonoBehaviour
             case 5:
                 ToLevel6();
                 break;
+            case 6:
+                ToLevel7();
+                break;
+            case 7:
+                ToLevel8();
+                break;
+            case 8:
+                ToLevel9();
+                break;
             default:
                 break;
         }
@@ -144,6 +176,15 @@ public class SceneLoadManager : MonoBehaviour
                 break;
             case 6:
                 ToLevel6();
+                break;
+            case 7:
+                ToLevel7();
+                break;
+            case 8:
+                ToLevel8();
+                break;
+            case 9:
+                ToLevel9();
                 break;
             default:
                 break;
