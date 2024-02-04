@@ -82,8 +82,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 637841139
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: -423288771, guid: 271d5a179b6ae13449da4c75f1091270, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -404,9 +404,12 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   pushForce: 0.015
   direction: {x: 0, y: 0, z: 0}
+  velocity: 0
   isHurt: 0
   hurtForce: 1
   isDead: 0
+  curpos: {x: 0, y: 0, z: 0}
+  lastpos: {x: 0, y: 0, z: 0}
 --- !u!114 &230736159830598946
 MonoBehaviour:
   m_ObjectHideFlags: 0

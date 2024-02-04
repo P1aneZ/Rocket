@@ -47,3 +47,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3880300877
+    locked: 0
+  - name: PlantForm
+    uniqueID: 1507789965
+    locked: 0
+  - name: Player
+    uniqueID: 637841139
+    locked: 0
+  - name: Device
+    uniqueID: 668018941
+    locked: 0

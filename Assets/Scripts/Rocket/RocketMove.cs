@@ -22,6 +22,7 @@ public class RocketMove : MonoBehaviour
     
     public float pushForce;
     public Vector3 direction;
+    public float velocity;
 
     public bool isHurt;
     public float hurtForce;
@@ -29,6 +30,9 @@ public class RocketMove : MonoBehaviour
     public bool isDead = false;
     private bool isLoad = false;
     private bool isPlay = false;
+
+    public Vector3 curpos;
+    public Vector3 lastpos;
 
     private void Awake()
     {
@@ -47,6 +51,12 @@ public class RocketMove : MonoBehaviour
             FollowMouseRotate();
             FollowMouseMove();
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        velocity = Speed();
     }
 
     private void OnEnable()
@@ -145,5 +155,14 @@ public class RocketMove : MonoBehaviour
     private void beginPlay()
     {
         isPlay = true;
+    }
+
+    public float Speed()
+    {
+
+        curpos = gameObject.transform.position;//当前点
+        float _speed = (Vector3.Magnitude(curpos - lastpos) / Time.deltaTime);//与上一个点做计算除去当前帧花的时间。
+        lastpos = curpos;//把当前点保存下一次用
+        return _speed;
     }
 }
