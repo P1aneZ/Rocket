@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class EnemyWalk : MonoBehaviour
+public class EnemyWalkMale : MonoBehaviour
 {
     public float speed;
     public float chaseSpeed;
@@ -27,6 +25,7 @@ public class EnemyWalk : MonoBehaviour
 
     public Character character;
     private FootStepController footstepController;
+
 
     void Start()
     {
@@ -57,7 +56,7 @@ public class EnemyWalk : MonoBehaviour
             velocity = Speed();
             if (velocity != 0)
             {
-               footstepController.StartWalking();
+                footstepController.StartWalking();
             }
             else
             {
@@ -68,7 +67,7 @@ public class EnemyWalk : MonoBehaviour
     }
     void Follow()
     {
-        if(GameObject.Find("Rocket_0"))
+        if (GameObject.Find("Rocket_0"))
             target = GameObject.Find("Rocket_0").GetComponent<Transform>().position;//获取目标的位置
         Vector2 position = transform.position;
         if (Mathf.Abs(gameObject.transform.position.x - target.x) > 5)//敌人和角色距离大于某个值时才开始朝玩家移动,这样避免了敌人与玩家冲重合
@@ -131,7 +130,7 @@ public class EnemyWalk : MonoBehaviour
                 waitTime = wait;
             }
         }
-        else 
+        else
         {
             if (gameObject.transform.position.x < movePos[i].position.x)
             {
@@ -139,7 +138,7 @@ public class EnemyWalk : MonoBehaviour
                 movingRight = true;
             }
             else if (gameObject.transform.position.x > movePos[i].position.x)
-            {               
+            {
                 gameObject.transform.localRotation = Quaternion.Euler(0, -0, 0);
                 movingRight = false;
                 //敌人转向
@@ -169,6 +168,4 @@ public class EnemyWalk : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
-
-
 }

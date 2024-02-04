@@ -9,7 +9,7 @@ public class EnemyAnimationMale : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private EnemyWalk enemyWalk;
+    private EnemyWalkMale enemyWalkMale;
 
     private Character character;
 
@@ -21,7 +21,7 @@ public class EnemyAnimationMale : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        enemyWalk = GetComponent<EnemyWalk>();
+        enemyWalkMale = GetComponent<EnemyWalkMale>();
         character = GetComponent<Character>();
         enemyAttack = GetComponent<EnemyAttackMale>();
     }
@@ -33,7 +33,7 @@ public class EnemyAnimationMale : MonoBehaviour
     }
     public void SetAnimation()
     {
-        anim.SetFloat("velocityX", Mathf.Abs(enemyWalk.velocity));
+        anim.SetFloat("velocityX", Mathf.Abs(enemyWalkMale.velocity));
         anim.SetBool("isDead", character.isDead);
         anim.SetBool("isAttack", enemyAttack.isAttack);
     }
