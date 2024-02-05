@@ -5024,8 +5024,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.041642427, y: -0.41123033}
-  m_Size: {x: 1.7708516, y: 4.51364}
+  m_Offset: {x: 0.041642427, y: -0.3862781}
+  m_Size: {x: 1.7708516, y: 4.4637356}
   m_Direction: 0
 --- !u!114 &7829673442216603116
 MonoBehaviour:
@@ -5211,4 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b6c524d68f6eb449831266a6b5196a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pass:
+    m_PersistentCalls:
+      m_Calls: []
   isDestroyed: 0
