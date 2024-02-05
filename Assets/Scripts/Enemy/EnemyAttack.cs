@@ -18,6 +18,10 @@ public class EnemyAttack : MonoBehaviour
             
             Shotting();//执行射击
         }
+        else
+        {
+            shotTime = 0;
+        }
     }
     private void Shotting()
     {
@@ -26,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
         isAttack = true;
         if (shotTime > shotRate)
         {
-            isAttack = true;
+           
             EnemySound.PlayEnemyAttackFemale();//播放女敌人攻击音效
                        
             shotTime = 0;//计时归0

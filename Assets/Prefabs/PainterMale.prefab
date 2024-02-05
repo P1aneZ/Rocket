@@ -241,7 +241,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   isDead: 0
-  invulnerableDuration: 5
+  invulnerableDuration: 0.5
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 0}
   deadParticlesEffect: {fileID: 0}
@@ -623,6 +623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSound: {fileID: 0}
+  isAround: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!1001 &2223619473077259472
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSound: {fileID: 0}
+  isAround: 0
 --- !u!82 &12456445
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1156,6 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSound: {fileID: 0}
+  isAround: 0
 --- !u!82 &100318848
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6574,6 +6576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSound: {fileID: 0}
+  isAround: 0
 --- !u!82 &797271126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7436,6 +7439,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1046257680}
     m_Modifications:
+    - target: {fileID: 2747744403199314784, guid: ae40685b2715dad44b0741fd702c9dae, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747744403199314784, guid: ae40685b2715dad44b0741fd702c9dae, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2747744403199314784, guid: ae40685b2715dad44b0741fd702c9dae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04

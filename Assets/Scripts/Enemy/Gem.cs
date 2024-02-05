@@ -10,7 +10,7 @@ public class Gem : MonoBehaviour
     public Vector3 pos;
     public float speed;//×Óµ¯ËÙ¶È
 
-    private float maxLifeTime = 2.0f;
+    private float maxLifeTime = 3.0f;
     private float lifeTime;
 
     

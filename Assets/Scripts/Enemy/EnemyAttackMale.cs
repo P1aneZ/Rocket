@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class EnemyAttackMale : MonoBehaviour
@@ -18,6 +19,10 @@ public class EnemyAttackMale : MonoBehaviour
         {
             Shotting();//执行射击
         }
+        else
+        {
+            shotTime = 0;
+        }
     }
     private void Shotting()
     {
@@ -26,7 +31,7 @@ public class EnemyAttackMale : MonoBehaviour
         isAttack = true;
         if (shotTime > shotRate)
         {
-            isAttack = true;
+            
             EnemySoundMale.PlayEnemyAttackmale();//播放男敌人攻击音效
 
             shotTime = 0;//计时归0

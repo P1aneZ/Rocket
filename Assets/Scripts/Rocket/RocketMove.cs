@@ -106,7 +106,7 @@ public class RocketMove : MonoBehaviour
         if (Input.GetMouseButton(0))//当鼠标左键按下时
         {
             //播放移动音效
-            if(!RocketSound.audioSrc.isPlaying)
+            if(!audioSource.isPlaying)
             {
                 RocketSound.PlayRocketMoving();
             }

@@ -13,6 +13,8 @@ public class EnemySound : MonoBehaviour
     public static AudioClip enemyHurtFemale1;
     public static AudioClip enemyHurtFemale2;
     public static AudioClip enemyHurtFemale3;
+
+    
     
    
     // Start is called before the first frame update
@@ -30,11 +32,7 @@ public class EnemySound : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
     public static void PlayEnemyAttackFemale()
     {
@@ -46,10 +44,10 @@ public class EnemySound : MonoBehaviour
         audioSrc.PlayOneShot(enemyDeadFemale);
     }
 
-    public static void PlayEnemyHurtFemale()
+    public  void PlayEnemyHurtFemale()
     {
-        int a = Random.Range(1, 4);//随机播放三种女敌人受伤音效的一种
-        if (a == 1)
+         int a = Random.Range(1, 4);//随机播放三种女敌人受伤音效的一种
+        if (a == 1) 
             audioSrc.PlayOneShot(enemyHurtFemale1);
         else if (a == 2)
             audioSrc.PlayOneShot(enemyHurtFemale2);
