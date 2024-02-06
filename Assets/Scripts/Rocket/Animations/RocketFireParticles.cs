@@ -10,7 +10,7 @@ public class RocketFireParticles : MonoBehaviour
     //获取火箭移动方向
     private RocketMove rocketMove;
     //获取粒子特效生命周期
-    private FireParticlesEffect fireEffect;
+    //private FireParticlesEffect fireEffect;
     //获得火焰粒子
     public GameObject fireParticlesEffect;
 
@@ -33,7 +33,7 @@ public class RocketFireParticles : MonoBehaviour
     {
         //获取组件，初始化火箭底部与中心的偏移值
         rocketMove = GetComponent<RocketMove>();
-        fireEffect = fireParticlesEffect.GetComponent<FireParticlesEffect>();
+        //fireEffect = fireParticlesEffect.GetComponent<FireParticlesEffect>();
         bottomOffset = new Vector3();
     }
 
@@ -52,7 +52,7 @@ public class RocketFireParticles : MonoBehaviour
         if(playCounter < 0 || firstPlay)
         {
             //播放粒子特效
-            Instantiate(fireParticlesEffect, rocketBottomPosition, Quaternion.identity);
+            Instantiate(fireParticlesEffect, rocketBottomPosition, Quaternion.Euler(90, 90, 0));
             firstPlay = false;
             //重置计时器
             playCounter = fireAppearAgainTime;
@@ -73,7 +73,10 @@ public class RocketFireParticles : MonoBehaviour
         rocketBottomPosition.y = transform.position.y - bottomOffset.y;
 
         //粒子效果方向和火箭移动方向相反
-        fireParticlesEffect.transform.right = rocketMove.direction;
+        //fireParticlesEffect.transform.right = rocketMove.direction;
+        //fireParticlesEffect.transform.rotation = Quaternion.Euler(fireParticlesEffect.transform.rotation.x, 90, 0);
+
+
     }
 
 }

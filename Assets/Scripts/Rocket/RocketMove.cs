@@ -15,8 +15,8 @@ public class RocketMove : MonoBehaviour
 
     public Rigidbody2D rb;
     public AudioSource audioSource;
-    //获取特效代码
-    private RocketFireParticles rocketFireParticles;
+    //获取特效
+    public FireParticlesEffect rocketFireParticles;
 
     [Header("基本参数")]
     
@@ -38,7 +38,7 @@ public class RocketMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //获取特效代码
-        rocketFireParticles = GetComponent<RocketFireParticles>();
+        //rocketFireParticles = GetComponent<RocketFireParticles>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -112,7 +112,9 @@ public class RocketMove : MonoBehaviour
             }
 
             //播放粒子特效播放
-            rocketFireParticles.PlayEffect();
+            //rocketFireParticles.PlayEffect();
+            //rocketFireParticles.SetActive(true);
+            rocketFireParticles.Play();
 
             //给予Rocket一个向着鼠标方向的力
             rb.AddForce(transform.up * pushForce, ForceMode2D.Impulse);
@@ -120,6 +122,9 @@ public class RocketMove : MonoBehaviour
         else
         {
             audioSource.Stop();
+            //关闭粒子特效
+            //rocketFireParticles.SetActive(false);
+            rocketFireParticles.Pause();
         }
 
     }

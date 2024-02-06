@@ -16,12 +16,12 @@ GameObject:
   - component: {fileID: 8443388726420831736}
   - component: {fileID: 84351349431056312}
   - component: {fileID: 7610387499330736621}
-  - component: {fileID: 230736159830598946}
   - component: {fileID: 2780441732538946405}
   - component: {fileID: 2657176953664828055}
   - component: {fileID: 8855110603742340335}
   - component: {fileID: -9077328986819635944}
   - component: {fileID: -4017537057680714719}
+  - component: {fileID: 4531343958082239798}
   m_Layer: 11
   m_Name: Rocket_0
   m_TagString: Rocket
@@ -410,20 +410,6 @@ MonoBehaviour:
   isDead: 0
   curpos: {x: 0, y: 0, z: 0}
   lastpos: {x: 0, y: 0, z: 0}
---- !u!114 &230736159830598946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746811516450506101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e6ffe3c6493774aa0c74b59673d5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireParticlesEffect: {fileID: 2472416973714407208, guid: 0853256a67c641541b84513164e55796, type: 3}
-  fireAppearAgainTime: 0.1
 --- !u!114 &2780441732538946405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,3 +568,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb22f49290cd924a86c8e45dec1f789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4531343958082239798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746811516450506101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e6ffe3c6493774aa0c74b59673d5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireParticlesEffect: {fileID: 2472416973714407208, guid: 0853256a67c641541b84513164e55796, type: 3}
+  fireAppearAgainTime: 1
