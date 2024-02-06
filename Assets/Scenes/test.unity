@@ -1165,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4910149511378639361, guid: 0e80fde595700b8498ddcd798bec5d06, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 5975
+      objectReference: {fileID: 0}
     - target: {fileID: 7695653315900909568, guid: 0e80fde595700b8498ddcd798bec5d06, type: 3}
       propertyPath: m_Name
       value: Rocket_0
