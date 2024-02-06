@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7cf1c3a2087d247958185c41a912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   currentHealth: 0
   isDead: 0
   invulnerableDuration: 0.5
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95440cba86419a43b06c61eae5b42a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotRate: 2
+  shotRate: 5
   gem: {fileID: 388524100257697790, guid: 533c20360ce523041acaeb2474d8b56b, type: 3}
   isAttack: 0
 --- !u!114 &3049788728436233764
@@ -765,6 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepSound: {fileID: 0}
   isAround: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!1 &7937288307045930265
 GameObject:
   m_ObjectHideFlags: 0

@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6554702a7718904889e8c9125cadf16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotRate: 2
+  shotRate: 5
   gem: {fileID: 7623025717750242973, guid: a745a9cbda80edd499336efce72b9065, type: 3}
   isAttack: 0
 --- !u!114 &6750712857822545377
