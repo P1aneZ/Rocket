@@ -103,7 +103,7 @@ MonoBehaviour:
   path: {x: 0, y: 0, z: 0}
   pos: {x: 0, y: 0, z: 0}
   speed: 5
-  damage: 20
+  damage: 15
 --- !u!50 &8294846328242207345
 Rigidbody2D:
   serializedVersion: 4

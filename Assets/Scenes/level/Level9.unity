@@ -12697,6 +12697,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket_0
       objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4310023272375489845, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
