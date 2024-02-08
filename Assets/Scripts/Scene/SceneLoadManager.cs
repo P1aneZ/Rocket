@@ -116,6 +116,11 @@ public class SceneLoadManager : MonoBehaviour
         SceneManager.LoadScene("PassScene");
     }
 
+    public void ToEndScene()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
+
     public void ToFailScene()
     {
         SceneManager.LoadScene("FailScene");

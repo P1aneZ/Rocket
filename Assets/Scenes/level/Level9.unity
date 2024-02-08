@@ -6345,7 +6345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: Pass.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToPassScene
+      value: ToEndScene
       objectReference: {fileID: 0}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: Pass.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
