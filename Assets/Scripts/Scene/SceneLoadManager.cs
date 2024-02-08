@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.tvOS;
+using static UnityEditor.ShaderData;
 
 public class SceneLoadManager : MonoBehaviour
 {
@@ -14,11 +15,6 @@ public class SceneLoadManager : MonoBehaviour
     public VoidEventSO nextLevel;
     //监听点击“重新开始”事件
     public VoidEventSO remake;
-
-    public void Start()
-    {
-        
-    }
 
     public void OnEnable()
     {
@@ -123,7 +119,7 @@ public class SceneLoadManager : MonoBehaviour
 
     public void ToFailScene()
     {
-        SceneManager.LoadScene("FailScene");
+        //SceneManager.LoadScene("FailScene");
     }
 
     public void ToNextLevel()
@@ -195,4 +191,5 @@ public class SceneLoadManager : MonoBehaviour
                 break;
         }
     }
+
 }

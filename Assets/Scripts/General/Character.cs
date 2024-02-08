@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -87,6 +88,7 @@ public class Character : MonoBehaviour
             {
                 Instantiate(deadParticlesEffect,this.transform.position , Quaternion.identity);
                 isBoom = true;
+                StartCoroutine(FailCounter());
             }
             else
             {
@@ -104,5 +106,15 @@ public class Character : MonoBehaviour
         //触发无敌状态，开始无敌时间倒计时
         invulnerable = true;
         invulnerableCounter = invulnerableDuration;
+    }
+
+    private IEnumerator FailCounter()
+    {
+        Debug.Log("协程中");
+        yield return new WaitForSeconds(3f);
+        Debug.Log("协程结束");
+
+        //切换场景
+        SceneManager.LoadScene("FailScene");
     }
 }
