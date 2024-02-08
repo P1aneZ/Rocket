@@ -5203,8 +5203,8 @@ MonoBehaviour:
   isDead: 0
   invulnerableDuration: 0
   invulnerable: 0
-  isHurtParticlesEffect: {fileID: 0}
-  deadParticlesEffect: {fileID: 0}
+  isHurtParticlesEffect: {fileID: 9062348628225875589, guid: f54262d7f96b54048beee272dabf9ecb, type: 3}
+  deadParticlesEffect: {fileID: 7400032590495207592, guid: c1a3ed2a6c5c6634db0e8d30c756e645, type: 3}
   rocketFireParticles: {fileID: 0}
   OnHealthChange:
     m_PersistentCalls:
@@ -5387,6 +5387,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   rocketmove: {fileID: 7610387499330736621, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  rocketFireParticles: {fileID: 0}
   deadParticlesEffect: {fileID: 7400032590495207592, guid: c1a3ed2a6c5c6634db0e8d30c756e645, type: 3}
   isDestroyed: 0
 --- !u!95 &5280804487094177711
