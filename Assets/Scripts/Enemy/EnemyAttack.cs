@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float shotRate = 2.0f;//攻击速度
-    private float shotTime;
+    public float shotTime;
     public GameObject gem;
 
     public bool isAttack=false;
@@ -25,14 +25,12 @@ public class EnemyAttack : MonoBehaviour
     }
     private void Shotting()
     {
-        
+       
         shotTime += Time.deltaTime;
         isAttack = true;
         if (shotTime > shotRate)
-        {
-           
+        {         
             EnemySound.PlayEnemyAttackFemale();//播放女敌人攻击音效
-                       
             shotTime = 0;//计时归0
         }        
     }
