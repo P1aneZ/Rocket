@@ -8,6 +8,15 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
     //成功通关事件
     public UnityEvent Pass;
 
+    //获取火箭
+    public RocketMove rocketmove;
+
+    //获取特效
+    public GameObject rocketFireParticles;
+
+    //获得死亡粒子动画
+    public GameObject deadParticlesEffect;
+
     public bool isDestroyed;//是否摧毁
          
     public void CheckDestoryDeviceDead()
@@ -25,6 +34,15 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
             this.gameObject.GetComponent<Character>().isDead = true;
             //this.gameObject.GetComponent<Character>().OnDie?.Invoke();
             isDestroyed = true;
+
+            rocketmove.enabled = false;
+
+            //播放死亡动画
+            Instantiate(deadParticlesEffect, rocketmove.transform.position, Quaternion.identity);
+
+            //不能让火箭继续喷
+            rocketFireParticles.SetActive(false);
+
             //过关事件
             StartCoroutine(PassCounter());
         }
