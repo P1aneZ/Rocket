@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEditor.ShaderData;
 
 public class SupplyedLaunchDevice : MonoBehaviour
 {

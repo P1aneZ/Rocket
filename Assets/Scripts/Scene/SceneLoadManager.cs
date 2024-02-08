@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.tvOS;
-using static UnityEditor.ShaderData;
+
 
 public class SceneLoadManager : MonoBehaviour
 {
