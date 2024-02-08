@@ -5843,12 +5843,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8911022015890592871, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
   m_PrefabInstance: {fileID: 727238398}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 727238401}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c48c5f80d44964548a59d545795b848e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &727238401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5619566300235686428, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 727238398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &727864954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7225,6 +7230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: rocketFireParticles
+      value: 
+      objectReference: {fileID: 727238401}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: Pass.m_PersistentCalls.m_Calls.Array.size
       value: 1
