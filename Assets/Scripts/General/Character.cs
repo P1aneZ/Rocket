@@ -26,6 +26,8 @@ public class Character : MonoBehaviour
     public GameObject deadParticlesEffect;
     //执行完一遍死亡动画就不执行了
     private bool isBoom = false;
+    //获取特效
+    public FireParticlesEffect rocketFireParticles;
 
     //血条变化的事件
     public UnityEvent<Character> OnHealthChange;
@@ -88,6 +90,7 @@ public class Character : MonoBehaviour
             {
                 Instantiate(deadParticlesEffect,this.transform.position , Quaternion.identity);
                 isBoom = true;
+                rocketFireParticles.Pause();
                 StartCoroutine(FailCounter());
             }
             else

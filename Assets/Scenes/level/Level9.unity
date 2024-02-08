@@ -12781,11 +12781,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8443388726420831736, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: rocketFireParticles
+      value: 
+      objectReference: {fileID: 1467969408}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+--- !u!114 &1467969408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8911022015890592871, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 1467969407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48c5f80d44964548a59d545795b848e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1468028779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2894122183609512179, guid: 357e80a3418af56438150d1a1fdcb3ae, type: 3}
