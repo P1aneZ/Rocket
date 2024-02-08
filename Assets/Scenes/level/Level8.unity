@@ -4328,6 +4328,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5619566300235686428, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
   m_PrefabInstance: {fileID: 604254597}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &604254601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7610387499330736621, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 604254597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70011f2c47c6d1b478613c835517f262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &608808130 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4376026528310783235, guid: 26e1dcdec57e6e643ab2c6570c7ffe8e, type: 3}
@@ -5949,6 +5960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: rocketmove
+      value: 
+      objectReference: {fileID: 604254601}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: rocketFireParticles
       value: 
