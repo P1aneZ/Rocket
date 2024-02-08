@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target;//玩家的位置
-    public Transform farBackground, middleBackground;//远景和中景的位置
+    public Transform farBackground/*, middleBackground*/;//远景和中景的位置
     private Vector2 lastPos;//最后一次的相机位置
 
     private void Start()
@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
 
         //根据相机移动的距离，移动远景和中景的位置
         farBackground.position += new Vector3(amountToMove.x, amountToMove.y, 0f);
-        middleBackground.position += new Vector3(amountToMove.x * 0.5f, amountToMove.y * 0.5f, 0f);
+        //middleBackground.position += new Vector3(amountToMove.x * 0.5f, amountToMove.y * 0.5f, 0f);
 
         lastPos = transform.position;//保证lastPos的位置每帧刷新
     }
