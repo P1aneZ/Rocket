@@ -8,12 +8,24 @@ public class SceneLoadManager : MonoBehaviour
 {
     //当前所在的关卡数
     [SerializeField]public static int levelNum;
+    //解锁的关卡数
+    int unlockedLevelIndex;
+    //关卡选择第二页要隐藏第一页的东西
+    public GameObject[] Page1;
+    //关卡选择第二页要显示的东西
+    public GameObject[] Page2; 
 
     [Header("事件监听")]
     //监听点击“下一关卡”事件
     public VoidEventSO nextLevel;
     //监听点击“重新开始”事件
     public VoidEventSO remake;
+
+    public void Start()
+    {
+        //读取解锁的关卡数
+        unlockedLevelIndex = PlayerPrefs.GetInt("unlockedLevelIndex");
+    }
 
     public void OnEnable()
     {
@@ -29,12 +41,34 @@ public class SceneLoadManager : MonoBehaviour
 
     public void ToLevelSelectPage1()
     {
-        SceneManager.LoadScene("levelSelectPage1");
+        if(SceneManager.GetActiveScene().name == "Menu")
+            SceneManager.LoadScene("levelSelectPage1");
+        else
+        {
+            for (int i = 0; i < Page1.Length; i++)
+            {
+                Page1[i].SetActive(true);
+            }
+            for (int i = 0; i < Page2.Length; i++)
+            {
+                Page2[i].SetActive(false);
+            }
+        }
+
     }
 
     public void ToLevelSelectPage2()
     {
-        SceneManager.LoadScene("levelSelectPage2");
+        for(int i = 0; i < Page1.Length; i++)
+        {
+            Page1[i].SetActive(false);
+        }
+        for(int i = 0;i < Page2.Length; i++)
+        {
+            Page2[i].SetActive(true);
+        }
+
+        //SceneManager.LoadScene("levelSelectPage2");
     }
 
     public void ToSetting()
@@ -108,6 +142,11 @@ public class SceneLoadManager : MonoBehaviour
 
     public void ToPassScene()
     {
+        if(levelNum > unlockedLevelIndex)
+        {
+            unlockedLevelIndex = levelNum;
+            PlayerPrefs.SetInt("unlockedLevel", unlockedLevelIndex);
+        }
         SceneManager.LoadScene("PassScene");
     }
 
