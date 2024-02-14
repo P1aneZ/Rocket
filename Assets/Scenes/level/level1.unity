@@ -1532,6 +1532,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2169321990085614685, guid: 8942824bcefd46e4791fa9258f1d48ed, type: 3}
+      propertyPath: CounterUI
+      value: 
+      objectReference: {fileID: 587486355}
+    - target: {fileID: 2169321990085614685, guid: 8942824bcefd46e4791fa9258f1d48ed, type: 3}
       propertyPath: Pass.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 859127413}
@@ -1584,6 +1588,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8942824bcefd46e4791fa9258f1d48ed, type: 3}
+--- !u!1 &587486355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3058802197245879023, guid: 8942824bcefd46e4791fa9258f1d48ed, type: 3}
+  m_PrefabInstance: {fileID: 587486354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &592717008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2894122183609512179, guid: 357e80a3418af56438150d1a1fdcb3ae, type: 3}
