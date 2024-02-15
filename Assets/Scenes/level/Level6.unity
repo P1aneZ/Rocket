@@ -5854,6 +5854,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5619566300235686428, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
   m_PrefabInstance: {fileID: 727238398}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &727238402 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5228028934966348628, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 727238398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &727238403 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4715578748491275973, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 727238398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &727864954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7230,6 +7240,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 727238403}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 727238402}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: rocketmove
       value: 

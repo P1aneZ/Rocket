@@ -2741,6 +2741,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5228028934966348628, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8443388726420831736, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
       propertyPath: rocketFireParticles
       value: 

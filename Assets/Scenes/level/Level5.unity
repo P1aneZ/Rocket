@@ -4344,6 +4344,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1978149404}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1978149415}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: rocketmove
       value: 
       objectReference: {fileID: 1978149403}
@@ -7911,6 +7919,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70011f2c47c6d1b478613c835517f262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1978149404 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4715578748491275973, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 887055507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1978149415 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5228028934966348628, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 887055507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2052230661
 GameObject:
   m_ObjectHideFlags: 0

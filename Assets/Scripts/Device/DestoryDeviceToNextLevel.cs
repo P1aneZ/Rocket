@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,8 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
 
     //获取火箭
     public RocketMove rocketmove;
+    public Rigidbody2D rb;
+    public SpriteRenderer sp;
 
     //获取特效
     public GameObject rocketFireParticles;
@@ -18,7 +21,8 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
     public GameObject deadParticlesEffect;
 
     public bool isDestroyed;//是否摧毁
-         
+
+
     public void CheckDestoryDeviceDead()
     {
         isDestroyed = true;//成功摧毁
@@ -42,6 +46,20 @@ public class DestoryDeviceToNextLevel : MonoBehaviour
 
             //不能让火箭继续喷
             rocketFireParticles.SetActive(false);
+
+            //关掉火箭的重力，并让火箭速度为0
+            rb.gravityScale = 0;
+            rb.velocity = Vector2.zero;
+
+            //火箭图像消失
+            Debug.Log("消失吧！");
+
+            // 获取精灵图的初始颜色
+            Color color = sp.color;
+            // 设置透明度为0.5
+            color.a = 0f;
+            // 将颜色应用到精灵图上
+            sp.color = color;
 
             //过关事件
             StartCoroutine(PassCounter());

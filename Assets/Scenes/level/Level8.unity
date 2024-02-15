@@ -4339,6 +4339,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70011f2c47c6d1b478613c835517f262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &604254602 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5228028934966348628, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 604254597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &604254603 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4715578748491275973, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  m_PrefabInstance: {fileID: 604254597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &608808130 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4376026528310783235, guid: 26e1dcdec57e6e643ab2c6570c7ffe8e, type: 3}
@@ -5960,6 +5970,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 604254603}
+    - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 604254602}
     - target: {fileID: 2964217449920858893, guid: 82eef3ef44efafa4d99b6505e615b09c, type: 3}
       propertyPath: rocketmove
       value: 

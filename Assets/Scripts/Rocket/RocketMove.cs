@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class RocketMove : MonoBehaviour
@@ -14,6 +15,7 @@ public class RocketMove : MonoBehaviour
     public VoidEventSO beginPlayGame;
 
     public Rigidbody2D rb;
+    public SpriteRenderer rocket;
     public AudioSource audioSource;
     //获取特效
     public FireParticlesEffect rocketFireParticles;
@@ -29,7 +31,6 @@ public class RocketMove : MonoBehaviour
 
     public bool isDead = false;
     private bool isLoad = false;
-    private bool isPlay = false;
 
     public Vector3 curpos;
     public Vector3 lastpos;
@@ -37,6 +38,7 @@ public class RocketMove : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rocket = GetComponent<SpriteRenderer>();
         //获取特效代码
         //rocketFireParticles = GetComponent<RocketFireParticles>();
         audioSource = GetComponent<AudioSource>();
@@ -63,14 +65,12 @@ public class RocketMove : MonoBehaviour
     {
         loadEvent.LoadRequestEvent += OnLoadEvent;
         afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoadedEvent;
-        beginPlayGame.OnEventRaised += beginPlay;
     }
 
     private void OnDisable()
     {
         loadEvent.LoadRequestEvent -= OnLoadEvent;
         afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
-        beginPlayGame.OnEventRaised -= beginPlay;
     }
 
     private void FollowMouseRotate()//用来让Rocket跟随鼠标旋转
@@ -146,8 +146,19 @@ public class RocketMove : MonoBehaviour
     {
         isDead = true;
 
+        //关掉火箭的重力，并让火箭速度为0
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
+
+        //火箭图像消失
+        Debug.Log("消失吧！");
+
+        // 获取精灵图的初始颜色
+        Color color = rocket.color;
+        // 设置透明度为0.5
+        color.a = 0f;
+        // 将颜色应用到精灵图上
+        rocket.color = color;
     }
 
     private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
@@ -160,10 +171,6 @@ public class RocketMove : MonoBehaviour
         isLoad = false;
     }
 
-    private void beginPlay()
-    {
-        isPlay = true;
-    }
 
     public float Speed()
     {
