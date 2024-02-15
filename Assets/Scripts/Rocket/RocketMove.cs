@@ -150,6 +150,7 @@ public class RocketMove : MonoBehaviour
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        //为什么git上不给我提交啊
 
         //火箭图像消失
         Debug.Log("消失吧！");
