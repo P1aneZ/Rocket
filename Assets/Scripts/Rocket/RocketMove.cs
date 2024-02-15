@@ -146,9 +146,10 @@ public class RocketMove : MonoBehaviour
     {
         isDead = true;
 
-        //关掉火箭的重力，并让火箭速度为0
+        //关掉火箭的重力，并让火箭速度为0，锁定z轴旋转
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         //火箭图像消失
         Debug.Log("消失吧！");
