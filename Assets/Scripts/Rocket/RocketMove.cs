@@ -145,6 +145,9 @@ public class RocketMove : MonoBehaviour
     public void RocketDead()
     {
         isDead = true;
+
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
     }
 
     private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
