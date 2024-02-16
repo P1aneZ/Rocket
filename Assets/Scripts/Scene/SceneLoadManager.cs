@@ -84,6 +84,7 @@ public class SceneLoadManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+        Destroy(GameObject.Find("BGMManager"));
     }
 
     public void ToLevel1()
