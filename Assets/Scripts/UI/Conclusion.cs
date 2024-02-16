@@ -31,7 +31,7 @@ public class Conclusion : MonoBehaviour
 
     private void Start()
     {
-        pointManager = GameObject.Find("PointsManager").GetComponent<PointManager>();
+        pointManager = GameObject.Find("PointsManager")?.GetComponent<PointManager>();
 
         switch (levelnum)
         {
@@ -61,7 +61,8 @@ public class Conclusion : MonoBehaviour
 
     private void PointsChange()
     {
-        time = pointManager.time;
+        if(pointManager)
+            time = pointManager.time;
         if (time <= bestTime)
         {
             timePoint = 1000;
@@ -74,10 +75,14 @@ public class Conclusion : MonoBehaviour
         {
             timePoint = 100;
         }
-        pointManager.time = 0;
 
-        life = pointManager.health;
-        maxLife = pointManager.maxHealth;
+        if(pointManager)
+        {
+            pointManager.time = 0;
+            life = pointManager.health;
+            maxLife = pointManager.maxHealth;
+        }
+            
         lifePoint = 10 + (int)(life / maxLife * 1990);
 
         score = lifePoint + timePoint;
