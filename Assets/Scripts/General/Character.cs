@@ -73,6 +73,7 @@ public class Character : MonoBehaviour
             TriggerInvulnerable();
             //÷¥–– ‹…À
             OnTakeDamage?.Invoke();
+            
         }
         else
         {

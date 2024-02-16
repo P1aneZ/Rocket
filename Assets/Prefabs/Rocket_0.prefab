@@ -304,9 +304,22 @@ MonoBehaviour:
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 9062348628225875589, guid: f54262d7f96b54048beee272dabf9ecb, type: 3}
   deadParticlesEffect: {fileID: 7400032590495207592, guid: c1a3ed2a6c5c6634db0e8d30c756e645, type: 3}
+  rocketFireParticles: {fileID: 8911022015890592871}
   OnHealthChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ac8c34a2fb4844745a624c8155080fad, type: 2}
+        m_TargetAssemblyTypeName: CharacterEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8443388726420831736}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -402,6 +415,7 @@ MonoBehaviour:
   afterSceneLoadedEvent: {fileID: 11400000, guid: b2340f8deb29d5444829c1cc3f2395d9, type: 2}
   beginPlayGame: {fileID: 11400000, guid: 6c2728bc2fec3b54e887b414867781c7, type: 2}
   rb: {fileID: 4715578748491275973}
+  rocket: {fileID: 0}
   audioSource: {fileID: 0}
   rocketFireParticles: {fileID: 8911022015890592871}
   pushForce: 0.015
