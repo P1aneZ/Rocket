@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,10 +26,12 @@ public class Conclusion : MonoBehaviour
     public float bestTime;
     public float worstTime;
 
-    public int levelnum = SceneLoadManager.levelNum;
+    public int levelnum;
 
     private void Start()
     {
+        levelnum = SceneLoadManager.levelNum;
+
         pointManager = GameObject.Find("PointsManager")?.GetComponent<PointManager>();
 
         switch (levelnum)
@@ -86,5 +87,8 @@ public class Conclusion : MonoBehaviour
         lifePoint = 10 + (int)(life / maxLife * 1990);
 
         score = lifePoint + timePoint;
+
+        // ´æ´¢·ÖÊý
+        PlayerPrefs.SetInt("Level"+ levelnum +"Score", score);
     }
 }

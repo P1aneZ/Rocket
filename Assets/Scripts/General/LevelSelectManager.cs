@@ -14,8 +14,6 @@ public class LevelSelectManager : MonoBehaviour
 
     private void Start()
     {
-        //测试完，打包前记得重置
-        //PlayerPrefs.SetInt("unlockedLevel",0);
         //读取解锁的关卡数
         unlockedLevelIndex = PlayerPrefs.GetInt("unlockedLevel");
         //父物体下有几个关卡，就开多大的数组捏
