@@ -21,14 +21,18 @@ public class SceneLoadManager : MonoBehaviour
     //监听点击“重新开始”事件
     public VoidEventSO remake;
 
+    //获取计分系统
+    public PointManager pointManager;
+
     public void Start()
-    {
+    {        
         //读取解锁的关卡数
         unlockedLevelIndex = PlayerPrefs.GetInt("unlockedLevelIndex");
     }
 
     public void OnEnable()
     {
+        pointManager = GameObject.Find("PointsManager")?.GetComponent<PointManager>();
         nextLevel.OnEventRaised += ToNextLevel;
         remake.OnEventRaised += Remake;
     }
@@ -84,6 +88,7 @@ public class SceneLoadManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+        pointManager.time = 0;
         Destroy(GameObject.Find("BGMManager"));
     }
 

@@ -9,6 +9,13 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused;
     //获取暂停UI
     public GameObject PauseUI;
+    //获取计分系统
+    public PointManager pointManager;
+
+    private void Start()
+    {
+        pointManager = GameObject.Find("PointsManager")?.GetComponent<PointManager>();
+    }
 
     public void Update()
     {
@@ -41,12 +48,14 @@ public class PauseMenu : MonoBehaviour
 
     public void Remake()
     {
+        pointManager.time = 0;
         Time.timeScale = 1.0f;
         GameIsPaused = false;
     }
 
     public void BackToMenu()
     {
+        
         Time.timeScale = 1.0f;
         GameIsPaused = false;
     }
