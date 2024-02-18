@@ -50,6 +50,9 @@ TagManager:
   - name: Background
     uniqueID: 3880300877
     locked: 0
+  - name: Background details
+    uniqueID: 1087018519
+    locked: 0
   - name: PlantForm
     uniqueID: 1507789965
     locked: 0
@@ -58,4 +61,7 @@ TagManager:
     locked: 0
   - name: Device
     uniqueID: 668018941
+    locked: 0
+  - name: foreground details
+    uniqueID: 4185505783
     locked: 0
