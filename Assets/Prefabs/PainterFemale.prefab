@@ -157,6 +157,7 @@ MonoBehaviour:
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 0}
   deadParticlesEffect: {fileID: 0}
+  rocketFireParticles: {fileID: 0}
   OnHealthChange:
     m_PersistentCalls:
       m_Calls:
@@ -239,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotRate: 5
+  shotTime: 0
   gem: {fileID: 388524100257697790, guid: 533c20360ce523041acaeb2474d8b56b, type: 3}
   isAttack: 0
 --- !u!114 &3049788728436233764
@@ -346,7 +348,7 @@ AudioSource:
   m_GameObject: {fileID: 3489913908151287515}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7273900760198273256, guid: fb5276b1e37a5094ca76f2bad28ee194, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

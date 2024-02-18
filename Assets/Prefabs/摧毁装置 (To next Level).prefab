@@ -5272,7 +5272,7 @@ AudioSource:
   m_GameObject: {fileID: 5563537528695210408}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7273900760198273256, guid: fb5276b1e37a5094ca76f2bad28ee194, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5387,6 +5387,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   rocketmove: {fileID: 7610387499330736621, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+  rb: {fileID: 0}
+  sp: {fileID: 0}
   rocketFireParticles: {fileID: 0}
   deadParticlesEffect: {fileID: 7400032590495207592, guid: c1a3ed2a6c5c6634db0e8d30c756e645, type: 3}
   isDestroyed: 0

@@ -88,6 +88,7 @@ public class SceneLoadManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+        if(GameObject.Find("PointsManager"))
         pointManager.time = 0;
         Destroy(GameObject.Find("BGMManager"));
     }

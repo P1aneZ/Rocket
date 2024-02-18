@@ -2044,6 +2044,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: fb5276b1e37a5094ca76f2bad28ee194, type: 2}
+  slider1: {fileID: 1880906822}
+  slider2: {fileID: 1895317027}
 --- !u!114 &1880906822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,6 +2162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: fb5276b1e37a5094ca76f2bad28ee194, type: 2}
+  slider1: {fileID: 1880906822}
+  slider2: {fileID: 1895317027}
 --- !u!114 &1895317027
 MonoBehaviour:
   m_ObjectHideFlags: 0
