@@ -89,6 +89,11 @@ public class Conclusion : MonoBehaviour
         score = lifePoint + timePoint;
 
         // ´æ´¢·ÖÊý
-        PlayerPrefs.SetInt("Level"+ levelnum +"Score", score);
+        int highestScore = PlayerPrefs.GetInt("Level" + levelnum + "Score");
+        if ( score > highestScore )
+        {
+            PlayerPrefs.SetInt("Level"+ levelnum +"Score", score);
+        }
+
     }
 }
