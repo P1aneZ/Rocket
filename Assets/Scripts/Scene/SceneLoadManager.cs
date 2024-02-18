@@ -88,8 +88,7 @@ public class SceneLoadManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
-        if(GameObject.Find("PointsManager"))
-        pointManager.time = 0;
+        Destroy(GameObject.Find("PointsManager"));
         Destroy(GameObject.Find("BGMManager"));
     }
 
@@ -97,54 +96,63 @@ public class SceneLoadManager : MonoBehaviour
     {
         levelNum = 1;
         SceneManager.LoadScene("Level1");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel2()
     {
         levelNum = 2;
         SceneManager.LoadScene("Level2");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel3()
     {
         levelNum = 3;
         SceneManager.LoadScene("Level3");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel4()
     {
         levelNum = 4;
         SceneManager.LoadScene("Level4");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel5()
     {
         levelNum = 5;
         SceneManager.LoadScene("Level5");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel6()
     {
         levelNum = 6;
         SceneManager.LoadScene("Level6");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel7()
     {
         levelNum = 7;
         SceneManager.LoadScene("Level7");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel8()
     {
         levelNum = 8;
         SceneManager.LoadScene("Level8");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToLevel9()
     {
         levelNum = 9;
         SceneManager.LoadScene("Level9");
+        Destroy(GameObject.Find("PointsManager"));
     }
 
     public void ToPassScene()
