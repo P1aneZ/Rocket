@@ -22,7 +22,7 @@ public class EnemySoundMale : MonoBehaviour
         //读取男敌人音效文件
         enemyAttackmale = Resources.Load<AudioClip>("Enemy_Attack_Male");
         enemyDeadmale = Resources.Load<AudioClip>("Enemy_Dead_Male");
-        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Hurt_Female3");
+        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Male_hurt");
     }
 
     public static void PlayEnemyAttackmale()
@@ -37,7 +37,7 @@ public class EnemySoundMale : MonoBehaviour
 
     public static void PlayEnemyHurtmale()
     {
-        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Hurt_Female3");
+        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Male_hurt");
         if (enemyAttackmale != null)
         {
             audioSrc.PlayOneShot(enemyHurtmale);
