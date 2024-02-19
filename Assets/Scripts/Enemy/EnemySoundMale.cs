@@ -19,20 +19,10 @@ public class EnemySoundMale : MonoBehaviour
         //获取播放器组件
         audioSrc = GetComponent<AudioSource>();
 
-
-
         //读取男敌人音效文件
-        enemyAttackmale = Resources.Load<AudioClip>("Enemy_Attack_male");
-        enemyDeadmale = Resources.Load<AudioClip>("Enemy_Dead_male");
-        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Hurt_male");
-        
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        enemyAttackmale = Resources.Load<AudioClip>("Enemy_Attack_Male");
+        enemyDeadmale = Resources.Load<AudioClip>("Enemy_Dead_Male");
+        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Hurt_Female3");
     }
 
     public static void PlayEnemyAttackmale()
@@ -47,8 +37,12 @@ public class EnemySoundMale : MonoBehaviour
 
     public static void PlayEnemyHurtmale()
     {
-
-        audioSrc.PlayOneShot(enemyHurtmale);
+        enemyHurtmale = Resources.Load<AudioClip>("Enemy_Hurt_Female3");
+        if (enemyAttackmale != null)
+        {
+            audioSrc.PlayOneShot(enemyHurtmale);
+            Debug.Log("男人受伤");
+        }
 
     }
 

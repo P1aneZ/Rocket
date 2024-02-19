@@ -27,10 +27,10 @@ public class Attack : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Enemy")
                  && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
-                other.GetComponent<Character>()?.TakeDamage(damage);
+                other.gameObject.GetComponent<Character>()?.TakeDamage(damage);
             else if(other.gameObject.CompareTag("DestroyDevice")&&
                 other.GetType().ToString() =="UnityEngine.PolygonCollider2D")
-                other.GetComponent<Character>()?.TakeDamage(damage);
+                other.gameObject.GetComponent<Character>()?.TakeDamage(damage);
         }
     }
 

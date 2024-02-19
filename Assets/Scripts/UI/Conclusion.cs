@@ -38,7 +38,39 @@ public class Conclusion : MonoBehaviour
         {
             case 1:
                 bestTime = 10;
-                worstTime = 30;
+                worstTime = 20;
+                break;
+            case 2:
+                bestTime = 20;
+                worstTime = 60;
+                break;
+            case 3:
+                bestTime = 15;
+                worstTime = 35;
+                break;
+            case 4:
+                bestTime = 35;
+                worstTime = 80;
+                break;
+            case 5:
+                bestTime = 15;
+                worstTime = 40;
+                break;
+            case 6:
+                bestTime = 28;
+                worstTime = 100;
+                break;
+            case 7:
+                bestTime = 38;
+                worstTime = 70;
+                break;
+            case 8:
+                bestTime = 42;
+                worstTime = 110;
+                break;
+            case 9:
+                bestTime = 60;
+                worstTime = 130;
                 break;
             default:
                 break;
@@ -70,7 +102,7 @@ public class Conclusion : MonoBehaviour
         }
         else if (time > bestTime && time <= worstTime)
         {
-            timePoint = 1000 - (int)(time - bestTime / worstTime - bestTime) * 900;
+            timePoint = 1000 - (int)(((time - bestTime) / (worstTime - bestTime)) * 900);
         }
         else if (time >= worstTime)
         {
@@ -84,7 +116,7 @@ public class Conclusion : MonoBehaviour
             maxLife = pointManager.maxHealth;
         }
             
-        lifePoint = 10 + (int)(life / maxLife * 1990);
+        lifePoint = (int)(life / maxLife * 2000);
 
         score = lifePoint + timePoint;
 
