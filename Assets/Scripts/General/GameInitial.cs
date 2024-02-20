@@ -9,11 +9,11 @@ public class GameInitial : MonoBehaviour
     {
         //测试完，打包前记得重置
 
-        //PlayerPrefs.SetInt("unlockedLevel",0);
+        //PlayerPrefs.SetInt("unlockedLevel", 0);
 
-        //for(int i = 1; i <= 9; i++) 
+        //for (int i = 1; i <= 9; i++)
         //{
-        //    PlayerPrefs.SetInt("Level" + i + "Score", 0); 
+        //    PlayerPrefs.SetInt("Level" + i + "Score", 0);
         //}
 
     }
