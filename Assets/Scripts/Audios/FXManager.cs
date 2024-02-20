@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FXManager : MonoBehaviour
 {
     [Header("²¥·ÅÆ÷")]
-    public static AudioSource FX;
+    public AudioSource FX;
 
     [Header("UIÒôÐ§")]
     public AudioClip click;
@@ -15,18 +16,22 @@ public class FXManager : MonoBehaviour
     public void PlayClick()
     {
         FX.clip = click;
-        FX.Play();
+        if(FX.clip != null )
+            FX.Play();
+        Debug.Log("µã»÷");
     }
 
     public void PlayCompleted()
     {
         FX.clip = completed;
-        FX.Play();
+        if (FX.clip != null)
+            FX.Play();
     }
 
     public void PlayFailed()
     {
         FX.clip = failed;
-        FX.Play();
+        if (FX.clip != null)
+            FX.Play();
     }
 }
