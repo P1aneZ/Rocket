@@ -52,6 +52,11 @@ public class EnemyWalkMale : MonoBehaviour
                     isFind = false;
                     followTime = 0;
                 }
+                else if (gameObject.transform.position.x < movePos[0].position.x || gameObject.transform.position.x > movePos[1].position.x)
+                {
+                    isFind = false;
+                    followTime = 0;
+                }
             }
             velocity = Speed();
             if (velocity != 0)

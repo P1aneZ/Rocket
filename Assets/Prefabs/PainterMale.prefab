@@ -303,6 +303,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3404266817704411272}
+        m_TargetAssemblyTypeName: EnemyAttackMale, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &3382750527236157525
 AudioSource:
   m_ObjectHideFlags: 0
@@ -423,10 +435,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6554702a7718904889e8c9125cadf16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotRate: 5
+  shotRate: 1
+  shotTime: 0
   gem: {fileID: 7623025717750242973, guid: a745a9cbda80edd499336efce72b9065, type: 3}
   isAttack: 0
   isHurt: 0
+  isDead: 0
 --- !u!114 &6750712857822545377
 MonoBehaviour:
   m_ObjectHideFlags: 0

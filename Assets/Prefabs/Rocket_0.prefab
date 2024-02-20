@@ -374,7 +374,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4281903634290914102, guid: 0a075eaf9fbcc0f4da6ba9c367f6eae7, type: 3}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToFailScene
         m_Mode: 1

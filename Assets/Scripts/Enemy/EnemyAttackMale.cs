@@ -7,17 +7,18 @@ public class EnemyAttackMale : MonoBehaviour
 {
     // Start is called before the first frame update
     public float shotRate = 2.0f;//攻击速度
-    private float shotTime;
+    public float shotTime;
     public GameObject gem;
 
     public bool isAttack = false;
     public bool isHurt = false;
+    public bool isDead = false;
 
     // Start is called before the first frame update
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (!isHurt)
-        {
+        
+        
             if (other.tag == "Rocket")//检测是否是Rocket进入视野
             {
                 Shotting();//执行射击
@@ -26,13 +27,14 @@ public class EnemyAttackMale : MonoBehaviour
             {
                 shotTime = 0;
             }
-        }
+        
     }
     private void Shotting()
     {
-        if (!isAttack)
+        if (!isHurt && !isDead)
         {
             shotTime += Time.deltaTime;
+            
         }
         if (shotTime > shotRate)
         {
@@ -59,5 +61,10 @@ public class EnemyAttackMale : MonoBehaviour
     public void AfterHurt()
     {
         isHurt = false;
+    }
+
+    public void Dead()
+    {
+        isDead = true;
     }
 }

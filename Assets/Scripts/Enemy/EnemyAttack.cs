@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public float shotRate ;//攻击速度
+    public float shotRate;//攻击速度
     public float shotTime;
     public GameObject gem;
 
     public bool isAttack = false;
     public bool isHurt = false;
+    public bool isDead = false;
 
     // Start is called before the first frame update
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (!isHurt)
-        {
+        
             if (other.tag == "Rocket")//检测是否是Rocket进入视野
             {
 
@@ -25,16 +25,16 @@ public class EnemyAttack : MonoBehaviour
             {
                 shotTime = 0;
             }
-        }
+        
     }
     private void Shotting()
     {
-        if (!isHurt)
+        if (!isHurt && !isDead)
         {
             shotTime += Time.deltaTime;
-          
+            
         }
-       
+
         if (shotTime > shotRate)
         {
             isAttack = true;
@@ -58,6 +58,11 @@ public class EnemyAttack : MonoBehaviour
 
     public void AfterHurt()
     {
-        isHurt= false;
+        isHurt = false;
+    }
+
+    public void Dead()
+    {
+        isDead = true;
     }
 }

@@ -227,6 +227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2194062580897782378}
+        m_TargetAssemblyTypeName: EnemyAttack, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6396226928014189674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,11 +263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95440cba86419a43b06c61eae5b42a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotRate: 5
+  shotRate: 1
   shotTime: 0
   gem: {fileID: 388524100257697790, guid: 533c20360ce523041acaeb2474d8b56b, type: 3}
   isAttack: 0
   isHurt: 0
+  isDead: 0
 --- !u!114 &3049788728436233764
 MonoBehaviour:
   m_ObjectHideFlags: 0
