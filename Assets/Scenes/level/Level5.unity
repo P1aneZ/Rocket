@@ -4604,9 +4604,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443388726420831736, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
-      propertyPath: rocketFireParticles
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 887055509}
+      objectReference: {fileID: 430309708}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4617,17 +4617,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4310023272375489845, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
   m_PrefabInstance: {fileID: 887055507}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &887055509 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8911022015890592871, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
-  m_PrefabInstance: {fileID: 887055507}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302673854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48c5f80d44964548a59d545795b848e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &915540979
 PrefabInstance:
   m_ObjectHideFlags: 0

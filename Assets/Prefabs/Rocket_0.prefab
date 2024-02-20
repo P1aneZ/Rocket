@@ -335,9 +335,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 746811516450506101}
-        m_TargetAssemblyTypeName: RocketAnimation, Assembly-CSharp
-        m_MethodName: PlayHurt
+      - m_Target: {fileID: -4017537057680714719}
+        m_TargetAssemblyTypeName: RocketSound, Assembly-CSharp
+        m_MethodName: PlayRocketHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -362,7 +362,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4281903634290914102, guid: 0a075eaf9fbcc0f4da6ba9c367f6eae7, type: 3}
+      - m_Target: {fileID: -4017537057680714719}
+        m_TargetAssemblyTypeName: RocketSound, Assembly-CSharp
+        m_MethodName: PlayRocketExplosion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToFailScene
         m_Mode: 1
