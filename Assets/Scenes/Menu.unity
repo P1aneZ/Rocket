@@ -561,7 +561,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel1
         m_Mode: 1
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel6
         m_Mode: 1
@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel3
         m_Mode: 1
@@ -3248,7 +3248,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel5
         m_Mode: 1
@@ -4538,7 +4538,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel8
         m_Mode: 1
@@ -4729,7 +4729,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel4
         m_Mode: 1
@@ -6086,7 +6086,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel7
         m_Mode: 1
@@ -7876,7 +7876,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel9
         m_Mode: 1
@@ -8142,7 +8142,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1886358584}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: ToLevel2
         m_Mode: 1
