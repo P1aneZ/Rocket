@@ -17747,6 +17747,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9077328986819635944, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 746811516450506101, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
       propertyPath: m_Name
       value: Rocket_0
@@ -24502,6 +24506,10 @@ PrefabInstance:
     - target: {fileID: 2380291534078820065, guid: f75b3e81812522040a0582125010a4c6, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.9661831
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518904382171194341, guid: f75b3e81812522040a0582125010a4c6, type: 3}
+      propertyPath: maxHealth
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3393253495201475921, guid: f75b3e81812522040a0582125010a4c6, type: 3}
       propertyPath: movePos.Array.data[0]
