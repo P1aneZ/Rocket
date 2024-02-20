@@ -24,6 +24,13 @@ public class SceneLoadManager : MonoBehaviour
     //获取计分系统
     public PointManager pointManager;
 
+    //菜单画布
+    public GameObject menuCanvas;
+    //设置画布
+    public GameObject settingCanvas;
+    //关卡选择画布
+    public GameObject levelSelectCanvas;
+
     public void Start()
     {        
         //读取解锁的关卡数
@@ -45,8 +52,11 @@ public class SceneLoadManager : MonoBehaviour
 
     public void ToLevelSelectPage1()
     {
-        if(SceneManager.GetActiveScene().name == "Menu")
-            SceneManager.LoadScene("levelSelectPage1");
+        if(menuCanvas.activeSelf)
+        {
+            menuCanvas.SetActive(false);
+            levelSelectCanvas.SetActive(true);
+        }
         else
         {
             for (int i = 0; i < Page1.Length; i++)
@@ -77,7 +87,8 @@ public class SceneLoadManager : MonoBehaviour
 
     public void ToSetting()
     {
-        SceneManager.LoadScene("Setting");
+        menuCanvas.SetActive(false);
+        settingCanvas.SetActive(true);
     }
 
     public void QuitGame()
@@ -87,9 +98,19 @@ public class SceneLoadManager : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Menu");
-        Destroy(GameObject.Find("PointsManager"));
-        Destroy(GameObject.Find("BGMManager"));
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            settingCanvas.SetActive(false);
+            levelSelectCanvas.SetActive(false);
+            menuCanvas.SetActive(true);
+        }
+        else
+        {
+            SceneManager.LoadScene("Menu");
+            Destroy(GameObject.Find("PointsManager"));
+            Destroy(GameObject.Find("SoundManager"));
+        }
+
     }
 
     public void ToLevel1()
