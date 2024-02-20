@@ -37,7 +37,7 @@ public class FootStepController : MonoBehaviour
         if (GameObject.Find("Rocket_0"))
             target = GameObject.Find("Rocket_0").GetComponent<Transform>().position;//获取目标的位置
         Vector2 position = transform.position;
-        if (Mathf.Abs(gameObject.transform.position.x - target.x) <= 10 && Mathf.Abs(gameObject.transform.position.y - target.y) <= 10)
+        if (Mathf.Abs(gameObject.transform.position.x - target.x) <= 30 && Mathf.Abs(gameObject.transform.position.y - target.y) <= 30)
         {
             isAround = true;
         }
