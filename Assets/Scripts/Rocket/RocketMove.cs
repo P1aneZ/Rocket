@@ -48,17 +48,19 @@ public class RocketMove : MonoBehaviour
     void Update()
     {
         //if (!isHurt)
-        if (!isDead && !isLoad) //&& isPlay)
-        {
-            FollowMouseRotate();
-            FollowMouseMove();
-        }
+
         
     }
 
     private void FixedUpdate()
     {
         velocity = Speed();
+
+        if (!isDead && !isLoad) //&& isPlay)
+        {
+            FollowMouseRotate();
+            FollowMouseMove();
+        }
     }
 
     private void OnEnable()
@@ -117,7 +119,7 @@ public class RocketMove : MonoBehaviour
             rocketFireParticles.Play();
 
             //给予Rocket一个向着鼠标方向的力
-            rb.AddForce(transform.up * pushForce, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * pushForce * Time.deltaTime, ForceMode2D.Impulse);
         }
         else
         {
