@@ -31,10 +31,10 @@ public class SceneLoadManager : MonoBehaviour
     //关卡选择画布
     public GameObject levelSelectCanvas;
 
-    public void Start()
+    public void Update()
     {        
         //读取解锁的关卡数
-        unlockedLevelIndex = PlayerPrefs.GetInt("unlockedLevelIndex");
+        unlockedLevelIndex = PlayerPrefs.GetInt("unlockedLevel");
     }
 
     public void OnEnable()
@@ -180,6 +180,8 @@ public class SceneLoadManager : MonoBehaviour
     {
         if(levelNum > unlockedLevelIndex)
         {
+            Debug.Log("解锁关卡：" + unlockedLevelIndex);
+            Debug.Log("当前关卡" + levelNum);
             unlockedLevelIndex = levelNum;
             PlayerPrefs.SetInt("unlockedLevel", unlockedLevelIndex);
         }
