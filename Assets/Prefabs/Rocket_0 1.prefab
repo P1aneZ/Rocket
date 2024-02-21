@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4910149511378639361}
   - component: {fileID: 7760982796853285634}
   - component: {fileID: 5613862056698954676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fire Particles Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4939,7 +4939,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 637841139
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: -423288771, guid: 271d5a179b6ae13449da4c75f1091270, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5159,6 +5159,7 @@ MonoBehaviour:
   invulnerable: 0
   isHurtParticlesEffect: {fileID: 9062348628225875589, guid: f54262d7f96b54048beee272dabf9ecb, type: 3}
   deadParticlesEffect: {fileID: 7400032590495207592, guid: c1a3ed2a6c5c6634db0e8d30c756e645, type: 3}
+  rocketFireParticles: {fileID: 0}
   OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -5257,6 +5258,7 @@ MonoBehaviour:
   afterSceneLoadedEvent: {fileID: 11400000, guid: b2340f8deb29d5444829c1cc3f2395d9, type: 2}
   beginPlayGame: {fileID: 11400000, guid: 6c2728bc2fec3b54e887b414867781c7, type: 2}
   rb: {fileID: 8620496488185356836}
+  rocket: {fileID: 0}
   audioSource: {fileID: 0}
   rocketFireParticles: {fileID: 5613862056698954676}
   pushForce: 0.015
