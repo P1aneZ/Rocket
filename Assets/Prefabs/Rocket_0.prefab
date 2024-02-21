@@ -430,7 +430,7 @@ MonoBehaviour:
   rocket: {fileID: 0}
   audioSource: {fileID: 0}
   rocketFireParticles: {fileID: 8911022015890592871}
-  pushForce: 0.01
+  pushForce: 1.8
   direction: {x: 0, y: 0, z: 0}
   velocity: 0
   isHurt: 0
