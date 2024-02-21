@@ -3962,6 +3962,9 @@ MonoBehaviour:
   click: {fileID: 8300000, guid: ba02aed505c949c44a54459370b45c57, type: 3}
   completed: {fileID: 8300000, guid: b69bbb31f4aefdf49bd93d42031759e3, type: 3}
   failed: {fileID: 8300000, guid: 695da9d44fae126418fbb09ee5964d19, type: 3}
+  ClickDown: {fileID: 11400000, guid: d2d3a193291e07b4b94ccf41f1f7d3af, type: 2}
+  Pass: {fileID: 11400000, guid: a805c0d2d4d5a5f4ebbf0987d375e583, type: 2}
+  Fail: {fileID: 11400000, guid: 6d0aef828137ed747b932e94ffc9e868, type: 2}
 --- !u!82 &924866366
 AudioSource:
   m_ObjectHideFlags: 0

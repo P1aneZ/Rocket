@@ -191,6 +191,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2141230298411190036}
+        m_TargetAssemblyTypeName: FXPlay, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6920402593768211007}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: BackToMenu
@@ -215,6 +227,7 @@ GameObject:
   - component: {fileID: 3978744506571691432}
   - component: {fileID: 314096838512286515}
   - component: {fileID: 1809217364812522565}
+  - component: {fileID: 2141230298411190036}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -313,6 +326,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2141230298411190036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150148552616508622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ae0b56859075a40979c813eeaf7516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickDown: {fileID: 11400000, guid: d2d3a193291e07b4b94ccf41f1f7d3af, type: 2}
+  Pass: {fileID: 11400000, guid: a805c0d2d4d5a5f4ebbf0987d375e583, type: 2}
+  Fail: {fileID: 11400000, guid: 6d0aef828137ed747b932e94ffc9e868, type: 2}
 --- !u!1 &1227276140324835523
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +598,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2476530870094964742}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2141230298411190036}
+        m_TargetAssemblyTypeName: FXPlay, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -920,6 +960,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2141230298411190036}
+        m_TargetAssemblyTypeName: FXPlay, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6920402593768211007}
         m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
         m_MethodName: Remake
@@ -1054,6 +1106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseUI: {fileID: 150148552616508622}
+  pointManager: {fileID: 0}
 --- !u!1 &7179173624371473227
 GameObject:
   m_ObjectHideFlags: 0

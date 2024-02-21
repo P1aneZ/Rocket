@@ -13,6 +13,25 @@ public class FXManager : MonoBehaviour
     public AudioClip completed;
     public AudioClip failed;
 
+    [Header("ÊÂ¼þ¼àÌý")]
+    public VoidEventSO ClickDown;
+    public VoidEventSO Pass;
+    public VoidEventSO Fail;
+
+    private void OnEnable()
+    {
+        ClickDown.OnEventRaised += PlayClick;
+        Pass.OnEventRaised += PlayCompleted;
+        Fail.OnEventRaised += PlayFailed;
+    }
+
+    private void OnDisable()
+    {
+        ClickDown.OnEventRaised -= PlayClick;
+        Pass.OnEventRaised -= PlayCompleted;
+        Fail.OnEventRaised -= PlayFailed;
+    }
+
     public void PlayClick()
     {
         FX.clip = click;
