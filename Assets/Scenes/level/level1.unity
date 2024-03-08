@@ -4214,6 +4214,10 @@ PrefabInstance:
       value: Rocket_0
       objectReference: {fileID: 0}
     - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444333239471656706, guid: 302d3180825a3f64f936a239185dd9c1, type: 3}
       propertyPath: VelocityModule.x.scalar
       value: 0
       objectReference: {fileID: 0}
